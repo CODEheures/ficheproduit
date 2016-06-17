@@ -2,28 +2,73 @@
 *********reset css *******
 */
 @import "reset";
-
+.clearfix:after {
+  content:"";
+  display: table;
+  clear: both;
+}
 /*
 ******** Vars *********
 */
-
+@import "colors";
+@import "fonts";
 
 /*
 ****** General ******
 */
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: none;
+}
 
-//@include border-box-sizing;
+html {
+  font-size: 62.5%;
+}
 
 body {
 
 }
 
-.clear {
-  //@include susy-clearfix;
+@mixin  container {
+  display: block;
+  max-width: 104.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin box1 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
+/*
+***** header ****
+*/
+header {
+  width: 100%;
 
+  & .heading-sup {
+    background: $black1;
+    height: 3.3rem;
+    & .content {
+      height: 100%;
+      @include container;
+      @include box1;
+      & p.help {
+        @include text-help;
+        & span {
+          color: $squash;
+        }
+      }
+      & p.store {
+        @include text-stores;
+      }
+    }
+  }
+}
 
 /*
 ****** Navbar ******
