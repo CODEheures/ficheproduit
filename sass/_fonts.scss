@@ -39,6 +39,7 @@ $font-family2: Myriad Pro, sans-serif;
   font-weight: 900;
   line-height: 1.45;
   color: $white;
+  text-transform: uppercase;
 }
 
 @mixin text-product-title {
@@ -67,7 +68,7 @@ $font-family2: Myriad Pro, sans-serif;
 
 @mixin text-card-price {
   font-family: $font-family;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   line-height: 1.61;
   text-align: center;
@@ -143,6 +144,8 @@ $font-family2: Myriad Pro, sans-serif;
   letter-spacing: -0.02rem;
   text-align: center;
   color: $brownish-grey-two;
+  text-transform: uppercase;
+  line-height: 3;
 }
 
 @mixin text-footer-band4-btn-phone {
@@ -160,7 +163,6 @@ $font-family2: Myriad Pro, sans-serif;
   font-weight: normal;
   font-style: italic;
   line-height: 1.71;
-  text-align: center;
   color: $warm-grey;
 }
 

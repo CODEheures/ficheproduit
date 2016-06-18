@@ -29,9 +29,13 @@ body {
 
 }
 
+a {
+  text-decoration: none;
+}
+
 @mixin  container {
-  display: block;
   max-width: 104.5rem;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -43,6 +47,26 @@ body {
   align-items: center;
 }
 
+@mixin box2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin box3 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin box4 {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 /*
 ***** header ****
@@ -54,17 +78,117 @@ header {
     background: $black1;
     height: 3.3rem;
     & .content {
-      height: 100%;
       @include container;
       @include box1;
-      & p.help {
-        @include text-help;
-        & span {
-          color: $squash;
+      & p {
+        @include box2;
+        & img {
+          padding-right: 1.4rem;
+        }
+        &.help {
+          @include text-help;
+          & span {
+            color: $squash;
+            padding-left: 0.3rem;
+          }
+        }
+        &.store a {
+          @include text-stores;
         }
       }
-      & p.store {
-        @include text-stores;
+    }
+  }
+
+  & .heading-main {
+    background: white;
+    height: 9.3rem;
+    & .content {
+      @include container;
+      @include box3;
+
+      & .logo {
+        @include box2;
+        & img {
+          z-index: 2;
+        }
+        & a {
+          background: $black1;
+          @include text-brand;
+          padding-top: 0.4rem;
+          padding-bottom: 0.4rem;
+          padding-left: 2rem;
+          padding-right: 1.3rem;
+          margin-left: -2rem;
+        }
+      }
+
+      & form.search {
+        @include box4;
+        & label {
+          z-index: 2;
+          margin-left: -3.5rem;
+        }
+        & input {
+          @include text-placeholder;
+          width: 38rem;
+          height: 3.9rem;
+          padding-right: 4rem;
+          padding-left: 1.2rem;
+        }
+      }
+
+      & div.separator {
+        width: 0.1rem;
+        height: 4.3rem;
+        background: $light-grey;
+      }
+
+      & div.account, & div.cart {
+        @include box2;
+        & img {
+          padding-right: 1.7rem;
+        }
+        & a {
+          @include text-menu-secondary;
+        }
+      }
+    }
+  }
+
+  & nav {
+    background: $white-two;
+    border: solid 1px $light-grey;
+    height: 5.3rem;
+    & .content {
+      @include container;
+      @include box1;
+      & ul {
+        @include box2;
+        & li {
+          & a {
+            @include text-menu-primary;
+          }
+          &:not(:last-of-type){
+            margin-right: 4.2rem;
+          }
+          &.active {
+            border-bottom: 0.5rem solid $fern-green;
+          }
+        }
+      }
+      & .map {
+        @include box2;
+        background: $black1;
+        height: 100%;
+        & img {
+          padding-left: 1.3rem;
+          padding-right: 1.3rem;
+        }
+        & a {
+          @include text-menu-primary-reverse;
+          padding-right: 1.4rem;
+
+        }
       }
     }
   }
