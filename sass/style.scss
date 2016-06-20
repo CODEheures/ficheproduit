@@ -287,6 +287,7 @@ section {
           }
           & table.avis {
             width: 100%;
+            max-width: 30rem;
             margin-bottom: 3.9rem;
             & tr:not(:last-of-type) td {
               padding-bottom: 2.2rem;
@@ -301,10 +302,12 @@ section {
                 text-decoration: underline;
               }
               &.note {
+                font-size:0;
                 & img {
                   margin-left: 0.7rem;
                 }
                 & span {
+                  @include text-product-notice;
                   margin-left: 1rem;
                 }
               }
@@ -524,6 +527,125 @@ section {
         }
       }
     }
+
+    &.recommandations {
+      @include box5;
+      background: white;
+      margin-bottom: 5.3rem;
+      padding-top: 2rem;
+      padding-bottom: 0.8rem;
+      padding-left: 1.1rem;
+      padding-right: 1.1rem;
+
+      & h2 {
+        @include text-tabs-inner-h2;
+        padding-left: 0.7rem;
+        margin-bottom: 1.8rem;
+      }
+      & div.list {
+        @include box0;
+        width: 100%;
+        & ul {
+          @include box0;
+          width: 100%;
+          & li {
+            @include box5;
+            max-width: 24.1rem;
+            padding-top: 2.2rem;
+            padding-bottom: 1.8rem;
+            padding-left: 1.1rem;
+            padding-right: 1.1rem;
+            border: solid 1px $light-grey;
+            & h3 {
+              @include text-card-title;
+            }
+            & img {
+              align-self: center;
+            }
+            & div.price {
+              @include box1;
+              padding-left: 1.2rem;
+              width: 100%;
+              & p {
+                @include text-card-price;
+              }
+            }
+            & div.original-price {
+              @include text-product-price-before;
+              padding-left: 1.2rem;
+              text-decoration: none;
+              margin-top: 1rem;
+              & span {
+                text-decoration: line-through;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
+/*
+********* Footer **********
+*/
+footer {
+  & div.advantages {
+    width: 100%;
+    background: $black1;
+    padding-top: 2.3rem;
+    padding-bottom: 3.2rem;
+    & div.content {
+      @include container;
+      & ul {
+        @include box3;
+        width: 100%;
+        & li {
+          @include box8;
+          @include text-footer-band;
+          padding-top: 1.5rem;
+        }
+      }
+    }
+  }
+
+  & div.payments {
+    width: 100%;
+    background: white;
+    padding-top: 2.2rem;
+    padding-bottom: 2rem;
+    & div.content {
+      @include container;
+      @include box1;
+      & ul {
+        @include box1;
+        width: 100%;
+        & li {
+          @include box8;
+          @include text-product-size;
+          & p.btn {
+
+          }
+        }
+      }
+      & div.left {
+        padding-left: 1.7rem;
+        & p {
+          margin-right: 3.7rem;
+        }
+      }
+      & div.right {
+        padding-right: 9.29rem;
+        & p.btn {
+          @include text-footer-btn-payment;
+          padding: 1.1rem 2.48rem;
+          background: $white-three;
+        }
+        & p:last-of-type {
+          margin-left: 3.1rem;
+        }
+      }
+    }
+  }
+
+}

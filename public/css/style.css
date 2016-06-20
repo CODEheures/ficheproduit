@@ -404,6 +404,7 @@ section {
             margin-bottom: 3.2rem; }
           section article.product div.presentation div.book table.avis {
             width: 100%;
+            max-width: 30rem;
             margin-bottom: 3.9rem; }
             section article.product div.presentation div.book table.avis tr:not(:last-of-type) td {
               padding-bottom: 2.2rem; }
@@ -418,10 +419,16 @@ section {
                 font-weight: normal;
                 color: #558540;
                 text-decoration: underline; }
-              section article.product div.presentation div.book table.avis td.note img {
-                margin-left: 0.7rem; }
-              section article.product div.presentation div.book table.avis td.note span {
-                margin-left: 1rem; }
+              section article.product div.presentation div.book table.avis td.note {
+                font-size: 0; }
+                section article.product div.presentation div.book table.avis td.note img {
+                  margin-left: 0.7rem; }
+                section article.product div.presentation div.book table.avis td.note span {
+                  font-family: Lato, sans-serif;
+                  font-size: 1.4rem;
+                  font-weight: bold;
+                  color: #333231;
+                  margin-left: 1rem; }
           section article.product div.presentation div.book div.colors p {
             font-family: Lato, sans-serif;
             font-size: 1.4rem;
@@ -756,3 +763,225 @@ section {
               line-height: 1.69;
               color: #333231;
               margin-top: 1.6rem; }
+    section article.recommandations {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      background: white;
+      margin-bottom: 5.3rem;
+      padding-top: 2rem;
+      padding-bottom: 0.8rem;
+      padding-left: 1.1rem;
+      padding-right: 1.1rem; }
+      section article.recommandations h2 {
+        font-family: Lato, sans-serif;
+        font-size: 2.2rem;
+        font-weight: bold;
+        line-height: 1.55;
+        color: #333231;
+        padding-left: 0.7rem;
+        margin-bottom: 1.8rem; }
+      section article.recommandations div.list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+        width: 100%; }
+        section article.recommandations div.list ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: stretch;
+              -ms-flex-align: stretch;
+                  align-items: stretch;
+          width: 100%; }
+          section article.recommandations div.list ul li {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            max-width: 24.1rem;
+            padding-top: 2.2rem;
+            padding-bottom: 1.8rem;
+            padding-left: 1.1rem;
+            padding-right: 1.1rem;
+            border: solid 1px #eee8e3; }
+            section article.recommandations div.list ul li h3 {
+              font-family: Lato, sans-serif;
+              font-size: 1.8rem;
+              font-weight: bold;
+              line-height: 1.56;
+              color: #333231; }
+            section article.recommandations div.list ul li img {
+              -ms-flex-item-align: center;
+                  align-self: center; }
+            section article.recommandations div.list ul li div.price {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-flow: row nowrap;
+                  flex-flow: row nowrap;
+              -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                      justify-content: space-between;
+              -webkit-box-align: center;
+                  -ms-flex-align: center;
+                      align-items: center;
+              padding-left: 1.2rem;
+              width: 100%; }
+              section article.recommandations div.list ul li div.price p {
+                font-family: Lato, sans-serif;
+                font-size: 1.8rem;
+                font-weight: bold;
+                line-height: 1.61;
+                text-align: center;
+                color: #558540; }
+            section article.recommandations div.list ul li div.original-price {
+              font-family: Lato, sans-serif;
+              font-size: 1.2rem;
+              font-weight: normal;
+              color: #62605e;
+              text-decoration: line-through;
+              padding-left: 1.2rem;
+              text-decoration: none;
+              margin-top: 1rem; }
+              section article.recommandations div.list ul li div.original-price span {
+                text-decoration: line-through; }
+
+/*
+********* Footer **********
+*/
+footer div.advantages {
+  width: 100%;
+  background: #393939;
+  padding-top: 2.3rem;
+  padding-bottom: 3.2rem; }
+  footer div.advantages div.content {
+    max-width: 104.5rem;
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    footer div.advantages div.content ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 100%; }
+      footer div.advantages div.content ul li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-family: Lato, sans-serif;
+        font-size: 1.4rem;
+        font-weight: normal;
+        line-height: 1.79;
+        text-align: center;
+        color: #ffffff;
+        padding-top: 1.5rem; }
+
+footer div.payments {
+  width: 100%;
+  background: white;
+  padding-top: 2.2rem;
+  padding-bottom: 2rem; }
+  footer div.payments div.content {
+    max-width: 104.5rem;
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    footer div.payments div.content ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 100%; }
+      footer div.payments div.content ul li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-family: Lato, sans-serif;
+        font-size: 1.6rem;
+        font-weight: normal;
+        color: #333231; }
+    footer div.payments div.content div.left {
+      padding-left: 1.7rem; }
+      footer div.payments div.content div.left p {
+        margin-right: 3.7rem; }
+    footer div.payments div.content div.right {
+      padding-right: 9.29rem; }
+      footer div.payments div.content div.right p.btn {
+        font-family: Myriad Pro, sans-serif;
+        font-size: 1.6rem;
+        font-weight: normal;
+        color: #333231;
+        padding: 1.1rem 2.48rem;
+        background: #e5e5e5; }
+      footer div.payments div.content div.right p:last-of-type {
+        margin-left: 3.1rem; }
