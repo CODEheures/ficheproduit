@@ -25,7 +25,7 @@ $font-family2: Myriad Pro, sans-serif;
   color: $fern-green;
 }
 
-@mixin text-tabs-inner-h1 {
+@mixin text-tabs-inner-h2 {
   font-family: $font-family;
   font-size: 2.2rem;
   font-weight: bold;
@@ -58,7 +58,7 @@ $font-family2: Myriad Pro, sans-serif;
   color: $black;
 }
 
-@mixin text-tabs-inner-h2 {
+@mixin text-tabs-inner-h3 {
   font-family: $font-family;
   font-size: 1.8rem;
   font-weight: bold;
@@ -134,6 +134,7 @@ $font-family2: Myriad Pro, sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 1.69;
+  text-transform: uppercase;
   color: $white-four;
 }
 
@@ -219,6 +220,7 @@ $font-family2: Myriad Pro, sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
   color: $fern-green;
+  text-transform: uppercase;
 }
 
 @mixin text-product-stock {
@@ -233,6 +235,7 @@ $font-family2: Myriad Pro, sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
   color: $brownish-grey;
+  text-transform: uppercase;
 }
 
 @mixin text-product-notice {
@@ -247,6 +250,7 @@ $font-family2: Myriad Pro, sans-serif;
   font-size: 1.2rem;
   font-weight: normal;
   color: $brownish-grey;
+  text-decoration: line-through;
 }
 
 @mixin text-footer-band3-see {
@@ -284,6 +288,14 @@ $font-family2: Myriad Pro, sans-serif;
   font-family: $font-family;
   font-size: 1.2rem;
   font-weight: bold;
+  color: $fern-green;
+  text-transform: uppercase;
+}
+
+@mixin text-product-read {
+  font-family: $font-family;
+  font-size: 1.2rem;
+  font-weight: normal;
   color: $fern-green;
 }
 

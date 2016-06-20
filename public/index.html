@@ -22,63 +22,249 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 <body>
-    <header>
-        <div class="heading-sup">
-            <div class="content">
-                <p class="help"><img src="/css/assets/phone.png" alt="phone" />Besoin d’aide ? Contactez nous  du lundi au vendredi de 8h30 à 18h :<span> 08 00 00 00 00</span></p>
-                <p class="store"><img src="/css/assets/location.png" alt="phone" /><a href="#">Nos Magasins</a></p>
+<header>
+    <div class="heading-sup">
+        <div class="content">
+            <p class="help"><img src="/css/assets/phone.png" alt="phone"/>Besoin d’aide ? Contactez nous du lundi au
+                vendredi de 8h30 à 18h :<span> 08 00 00 00 00</span></p>
+            <p class="store"><img src="/css/assets/location.png" alt="phone"/><a href="#">Nos Magasins</a></p>
+        </div>
+    </div>
+    <div class="heading-main">
+        <div class="content">
+            <div class="logo">
+                <img src="/css/assets/nature_leaf.png" alt="logo"/>
+                <a href="/" title="Site sport et nature">sport et nature</a>
+            </div>
+            <form class="search" action="#">
+                <label for="search"><img src="/css/assets/search.png"></label>
+                <input type="search" name="search" id="search" placeholder="Je cherche un produit, une marque, etc..."/>
+            </form>
+            <div class="account">
+                <img src="/css/assets/user.png" alt="logo"/>
+                <a href="#" title="vers mon compte">Mon compte</a>
+            </div>
+            <div class="separator"></div>
+            <div class="cart">
+                <img src="/css/assets/shopping_cart.png" alt="logo"/>
+                <a href="#" title="vers mon panier">Panier</a>
             </div>
         </div>
-        <div class="heading-main">
-            <div class="content">
-                <div class="logo">
-                    <img src="/css/assets/nature_leaf.png" alt="logo" />
-                    <a href="/" title="Site sport et nature">sport et nature</a>
+    </div>
+    <nav>
+        <div class="content">
+            <ul>
+                <li class="active">
+                    <a href="#" title="menu chaussures">chaussures</a>
+                </li>
+                <li>
+                    <a href="#" title="menu vetements">vêtements</a>
+                </li>
+                <li>
+                    <a href="#" title="menu randonnée">randonnée</a>
+                </li>
+                <li>
+                    <a href="#" title="menu pêche">pêche</a>
+                </li>
+            </ul>
+            <p class="map">
+                <img src="/css/assets/map.png" alt="carte itinéraire"/>
+                <a href="#" title="vers la carte">cartes et itinéraires</a>
+            </p>
+        </div>
+    </nav>
+</header>
+<section>
+    <article class="product">
+        <div class="ariane">
+            <p>Accueil > Niveau 1 > Nom du produit ici.</p>
+        </div>
+        <div class="presentation">
+            <div class="vignettes">
+                <p><a href="#" title="vue coté 1"><img src="/img/productv1.png" alt="vue de coté 1"/></a></p>
+                <p><a href="#" title="vue coté 2"><img src="/img/productv2.png" alt="vue de coté 2"/></a></p>
+                <p><a href="#" title="vue dessous"><img src="/img/productv3.png" alt="vue de dessous"/></a></p>
+                <p><a href="#" title="vue 360"><img src="/css/assets/vue360deg.png" alt="vue 360"/></a></p>
+                <p><a href="#" title="youtube"><img src="/css/assets/youtube.png" alt="lien youtube"/></a></p>
+            </div>
+            <div class="photo">
+                <img src="/img/productv0.png"/>
+            </div>
+            <div class="book">
+                <h1>Chaussures de Randonnée Geoxiflux Homme</h1>
+                <table class="avis">
+                    <tbody>
+                    <tr>
+                        <td>Avis de l'expert</td>
+                        <td class="note">
+                            <img src="/css/assets/star_enable.svg">
+                            <img src="/css/assets/star_enable.svg">
+                            <img src="/css/assets/star_enable.svg">
+                            <img src="/css/assets/star_enable.svg">
+                            <img src="/css/assets/star_disable.svg">
+                            <span>(4)</span>
+                        </td>
+                        <td>
+                            <a href="#" title="lire avis">Lire l'avis</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Avis client</td>
+                        <td class="note">
+                            <img src="/css/assets/star_enable.svg">
+                            <img src="/css/assets/star_enable.svg">
+                            <img src="/css/assets/star_enable.svg">
+                            <img src="/css/assets/star_enable.svg">
+                            <img src="/css/assets/star_disable.svg">
+                            <span>(4)</span>
+                        </td>
+                        <td>
+                            <a href="#" title="lire avis">Lire l'avis</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="colors">
+                    <p>Ce produit est disponible dans les coloris suivants</p>
+                    <p>
+                        <a href="#" title="couleur blanche"><img src="/img/product-color1.png"
+                                                                 alt="couleur blanche"/></a>
+                        <a href="#" title="couleur orange"><img src="/img/product-color2.png" alt="couleur orange"/></a>
+                        <a href="#" title="couleur bleue"><img src="/img/product-color3.png" alt="couleur bleue"/></a>
+                    </p>
                 </div>
-                <form class="search" action="#">
-                    <label for="search"><img src="/css/assets/search.png"></label>
-                    <input type="search" name="search" id="search" placeholder="Je cherche un produit, une marque, etc..."/>
-                </form>
-                <div class="account">
-                    <img src="/css/assets/user.png" alt="logo" />
-                    <a href="#" title="vers mon compte">Mon compte</a>
+                <div class="socials">
+                    <p>
+                        <a href="#" title="facebook"><img src="/css/assets/facebook.svg" alt="lien facebook"/></a>
+                        <a href="#" title="twitter"><img src="/css/assets/twitter.svg" alt="lien twitter"/></a>
+                        <a href="#" title="googleplus"><img src="/css/assets/googleplus.svg" alt="lien googleplus"/></a>
+                        <a href="#" title="pinterest"><img src="/css/assets/pinterest.svg" alt="lien pinterest"/></a>
+                    </p>
                 </div>
-                <div class="separator"></div>
-                <div class="cart">
-                    <img src="/css/assets/shopping_cart.png" alt="logo" />
-                    <a href="#" title="vers mon panier">Panier</a>
+            </div>
+            <form class="purchase" action="#">
+                <div class="price">
+                    <p class="price-original">69,99€</p>
+                    <p class="price-promotion">57,59€<span>ttc</span></p>
+                </div>
+                <div class="size">
+                    <label for="size">Taille</label>
+                    <div class="select">
+                        <select name="size" id="size">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                            <option value="46">46</option>
+                        </select>
+                        <img src="/css/assets/select.svg" alt="select">
+                    </div>
+                </div>
+                <div class="cart-add">
+                    <input type="submit" value="ajouter au panier"/>
+                </div>
+                <div class="stock">
+                    <img src="/css/assets/valide.svg">
+                    <p>en stock</p>
+                </div>
+                <div class="expedition">
+                    <img src="/css/assets/camionpouetpouet.svg">
+                    <p>Expédition <span class="value">Gratuite</span> sous 24h</p>
+                </div>
+            </form>
+        </div>
+    </article>
+
+    <article class="tabs">
+        <div class="selectors">
+            <a href="#" title="description" class="active">description</a>
+            <a href="#" title="caractristiques">caractéristiques</a>
+            <a href="#" title="description">
+                Avis (125)
+                <img src="/css/assets/star_enable.svg">
+                <img src="/css/assets/star_enable.svg">
+                <img src="/css/assets/star_enable.svg">
+                <img src="/css/assets/star_enable.svg">
+                <img src="/css/assets/star_disable2.svg">
+            </a>
+        </div>
+        <div class="tab1">
+            <div class="left">
+                <div class="title">
+                    <img src="/css/assets/triangle.svg"/>
+                    <h2>La chaussure idéale pour des randonnées</h2>
+                </div>
+                <div class="argument">
+                    <div class="title">
+                        <img src="/css/assets/check.svg"/>
+                        <h3>Un super argument markting</h3>
+                    </div>
+                    <p>Gummies cotton candy tiramisu cake fruitcake. Jelly pastry chupa chups jelly-o cake dragée.
+                        Toffee cake donut powder wafer gingerbread cupcake. Danish lollipop soufflé chocolate candy
+                        tootsie roll lemon drops.
+                    </p>
+                    <p>
+                        Dessert danish ice cream ice cream pie tart gummies gummies tiramisu. Lemon drops lollipop
+                        biscuit.
+                    </p>
+                </div>
+                <div class="argument">
+                    <div class="title">
+                        <img src="/css/assets/check.svg"/>
+                        <h3>Un autre ici</h3>
+                    </div>
+                    <p>Gummies cotton candy tiramisu cake fruitcake. Jelly pastry chupa chups jelly-o cake dragée.
+                        Toffee cake donut powder wafer gingerbread cupcake.<br/>
+                        Danish lollipop soufflé chocolate candy tootsie roll lemon drops. Dessert danish ice cream ice
+                        cream pie tart gummies gummies tiramisu.
+                    </p>
+                    <p>
+                        Lemon drops lollipop biscuit. Lemon drops sweet sugar plum ice cream sugar plum sweet dessert
+                        croissant fruitcake.
+                    </p>
+                </div>
+                <div class="argument">
+                    <div class="title">
+                        <img src="/css/assets/check.svg"/>
+                        <h3>Encore un argument</h3>
+                    </div>
+                    <p>Gummies cotton candy tiramisu cake fruitcake. Jelly pastry chupa chups jelly-o cake dragée.
+                        Toffee cake donut powder wafer gingerbread cupcake. Danish lollipop soufflé chocolate candy
+                        tootsie roll lemon drops.
+                    </p>
+                    <p>
+                        Dessert danish ice cream ice cream pie tart gummies gummies tiramisu. Lemon drops lollipop
+                        biscuit. Lemon drops sweet sugar plum ice cream sugar.
+                        Plum sweet dessert croissant fruitcake.
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="title">
+                    <img src="/css/assets/triangle.svg"/>
+                    <h2>Les photos de nos clients</h2>
+                </div>
+                <div class="photo">
+                    <img src="/img/client.jpg" alt="photo de client"/>
+                    <a href="#" title="photo précédente" class="back"><img src="/css/assets/arrow-right.png"
+                                                                           alt="image fleche gauche"></a>
+                    <a href="#" title="photo suivante" class="next"><img src="/css/assets/arrow-left.png"
+                                                                         alt="image fleche droite"></a>
+                    <p>Matthieu, 29ans - FRANCE</p>
                 </div>
             </div>
         </div>
-        <nav>
-            <div class="content">
-                <ul>
-                    <li class="active">
-                        <a href="#" title="menu chaussures">chaussures</a>
-                    </li>
-                    <li>
-                        <a href="#" title="menu vetements">vêtements</a>
-                    </li>
-                    <li>
-                        <a href="#" title="menu randonnée">randonnée</a>
-                    </li>
-                    <li>
-                        <a href="#" title="menu pêche">pêche</a>
-                    </li>
-                </ul>
-                <p class="map">
-                    <img src="/css/assets/map.png" alt="carte itinéraire" />
-                    <a href="#" title="vers la carte">cartes et itinéraires</a>
-                </p>
-            </div>
-        </nav>
-    </header>
-    <section>
-
-
-    </section>
+    </article>
+</section>
 </body>
 </html>

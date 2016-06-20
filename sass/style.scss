@@ -36,8 +36,16 @@ a {
 @mixin  container {
   max-width: 104.5rem;
   height: 100%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@mixin box0 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 @mixin box1 {
@@ -64,6 +72,34 @@ a {
 @mixin box4 {
   display: flex;
   flex-flow: row-reverse nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin box5 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+@mixin box6 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+@mixin box7 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: start;
+}
+
+@mixin box8 {
+  display: flex;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
 }
@@ -157,7 +193,7 @@ header {
 
   & nav {
     background: $white-two;
-    border: solid 1px $light-grey;
+    border: solid 0.1rem $light-grey;
     height: 5.3rem;
     & .content {
       @include container;
@@ -195,18 +231,299 @@ header {
 }
 
 /*
-****** Navbar ******
+********* Section *********
 */
+section {
+  width: 100%;
+  background: $silver;
+  @include box5;
+
+  & article {
+    @include container;
+
+    &.product {
+      background: white;
+      @include box5;
+      margin-top: 2.7rem;
+      margin-bottom: 2.5rem;
+
+      & div.ariane {
+        @include box2;
+        padding-top: 1.7rem;
+        padding-left: 1rem;
+        & p {
+          @include text-breadcrumb;
+        }
+      }
+      & div.presentation {
+        width: 100%;
+        @include box0;
+
+        & div.vignettes {
+          padding-left: 1.2rem;
+          margin-top: 2.2rem;
+          & p {
+            margin-bottom: 0.6rem;
+            border: solid 0.1rem $light-grey;
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+            padding-left: 0.1rem;
+            padding-right: 0.1rem;
+            text-align: center;
+          }
+        }
+
+        & div.photo {
+          margin-top: 2.2rem;
+        }
+
+        & div.book {
+          margin-top: 2.2rem;
+          margin-bottom: 2.1rem;
+          max-width: 36.8rem;
+          & h1 {
+            @include text-product-title;
+            margin-bottom: 3.2rem;
+          }
+          & table.avis {
+            width: 100%;
+            margin-bottom: 3.9rem;
+            & tr:not(:last-of-type) td {
+              padding-bottom: 2.2rem;
+            }
+            & td {
+              @include text-product-notice;
+              & span.note {
+
+              }
+              & a {
+                @include text-product-read;
+                text-decoration: underline;
+              }
+              &.note {
+                & img {
+                  margin-left: 0.7rem;
+                }
+                & span {
+                  margin-left: 1rem;
+                }
+              }
+            }
+          }
+          & div.colors {
+            & p {
+              @include text-product-color-disponibility;
+            }
+            & img {
+              margin-top: 1.6rem;
+              margin-bottom: 1.9rem;
+              margin-right: 1.6rem;
+              border: solid 0.1rem $light-grey;
+            }
+          }
+          & div.socials {
+            border-top: solid 1px $light-grey;
+            padding-top: 1.1rem;
+            padding-left: 0.4rem;
+            & img {
+              width: 2.4rem;
+              height: 2.4rem;
+              margin-right: 1.3rem;
+            }
+          }
+        }
+
+        & form.purchase {
+          padding-left: 1.2rem;
+          padding-right: 1.2rem;
+          padding-top: 2.3rem;
+          padding-bottom: 2.4rem;
+          border: solid 0.1rem $light-grey;
+          margin-right: 2.1rem;
+          margin-bottom: 3.1rem;
+          margin-left: 2.9rem;
+          @include box5;
+          & div.price {
+            @include box1;
+            width: 100%;
+            border-bottom: solid 1px $light-grey;
+            padding-bottom: 2rem;
+            & p.price-original {
+              @include text-product-price-before;
+            }
+            & p.price-promotion {
+              @include text-product-price;
+              & span {
+                @include text-product-taxes;
+                padding-left: 1.2rem;
+              }
+            }
+          }
+          & div.size {
+            @include box1;
+            width: 100%;
+            border-bottom: solid 1px $light-grey;
+            padding-top: 1.6rem;
+            padding-bottom: 1.4rem;
+
+            & label {
+              @include text-product-size;
+            }
+            & div.select {
+              position: relative;
+              & select {
+                @include text-product-size-input;
+                appearance: none;
+                padding-top: 1.4rem;
+                padding-bottom: 1.4rem;
+                padding-left: 1.4rem;
+                padding-right: 3.4rem;
+                cursor: pointer;
+              }
+              & img {
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                //margin-left: -2rem;
+                pointer-events: none;
+              }
+            }
 
 
+          }
 
-/*
-***** Header Home *****
-*/
+          & div.cart-add {
+            padding-top: 1.9rem;
+            padding-bottom: 1.4rem;
+            border-bottom: solid 1px $light-grey;
+            & input {
+              @include text-product-btn-add;
+              padding-left: 2.6rem;
+              padding-right: 2.6rem;
+              padding-top: 1.7rem;
+              padding-bottom: 1.9rem;
+              background: $fern-green;
+              border: none;
+              border-radius: 0.2rem;
+            }
+          }
 
+          & div.stock {
+            @include box1;
+            padding-top: 1.9rem;
+            & p {
+              @include text-product-stock;
+              padding-left: 1.8rem;
+            }
+          }
 
-/*
-********* Main *********
-*/
+          & div.expedition {
+            @include box1;
+            padding-top: 1.9rem;
+            & p {
+              @include text-product-color-disponibility;
+              padding-left: 1.8rem;
+              & span {
+                @include text-product-stock;
+              }
+            }
+          }
+        }
+      }
+    }
 
+    &.tabs {
+      @include box5;
+      margin-bottom: 2.9rem;
+      & div.selectors {
+        @include box6;
+        & a {
+          padding: 1.4rem 2.75rem;
+          margin-right: 0.15rem;
+          &:not(.active) {
+            @include text-tabs-title-close;
+            margin-bottom: 0.2rem;
+            background: $pale-grey;
+          }
+          &.active {
+            @include text-tabs-title-open;
+            margin-bottom: 0;
+            background: white;
+          }
+        }
+      }
+      & div.tab1 {
+        @include box7;
+        padding-top: 3.1rem;
+        padding-bottom: 3.4rem;
+        padding-left: 1.45rem;
+        padding-right: 3.1rem;
+        background: white;
+        width: 100%;
+        & div.title {
+          @include box2;
+          width: 100%;
+          margin-bottom: 3.3rem;
+          & h2 {
+            @include text-tabs-inner-h2;
+            padding-left: 1.23rem;
+          }
+        }
+
+        & div.left {
+          @include box8;
+          padding-right: 5.45rem;
+          & div.argument {
+            padding-left: 1.15rem;
+            & div.title {
+              margin-bottom: 1.7rem;
+              & h3 {
+                @include text-tabs-inner-h3;
+                padding-left: 1.23rem;
+              }
+            }
+            & p {
+              @include text-tabs-inner-p;
+              margin-top: 1rem;
+            }
+            &:not(:last-of-type) p:last-child {
+              border-bottom: solid 1px $light-grey;
+              padding-bottom: 3.1rem;
+            }
+          }
+        }
+
+        & div.right {
+          @include box8;
+          & div.photo {
+            @include box8;
+            position: relative;
+            margin-left: 2.3rem;
+            & a {
+              position: absolute;
+              top: calc(50% - 2.3rem);
+              height: 4.6rem;
+              width: 4.6rem;
+              background: white;
+              text-align: center;
+              &.back {
+                left: -1.3rem;
+              }
+              &.next {
+                right: -1.3rem;
+              }
+              & img {
+                margin-top: 0.9rem;
+              }
+            }
+            & p {
+              @include text-tabs-inner-photo-desc;
+              margin-top: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
