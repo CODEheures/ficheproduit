@@ -131,7 +131,7 @@ header {
           font-weight: normal;
           line-height: 1.71;
           color: #ffffff; }
-          header .heading-sup .content p.help span {
+          header .heading-sup .content p.help a {
             color: #f19319;
             padding-left: 0.3rem; }
         header .heading-sup .content p.store a {
@@ -538,7 +538,7 @@ section {
               section article.product div.presentation form.purchase div.size div.select img {
                 position: absolute;
                 right: 1rem;
-                top: 50%;
+                top: calc(50% - 0.2rem);
                 pointer-events: none; }
           section article.product div.presentation form.purchase div.cart-add {
             padding-top: 1.9rem;
@@ -655,7 +655,7 @@ section {
                 justify-content: space-between;
         -webkit-box-align: start;
             -ms-flex-align: start;
-                align-items: start;
+                align-items: flex-start;
         padding-top: 3.1rem;
         padding-bottom: 3.4rem;
         padding-left: 1.45rem;
@@ -745,7 +745,7 @@ section {
             margin-left: 2.3rem; }
             section article.tabs div.tab1 div.right div.photo a {
               position: absolute;
-              top: calc(50% - 2.3rem);
+              top: calc(50% - 4.6rem);
               height: 4.6rem;
               width: 4.6rem;
               background: white;
@@ -985,3 +985,190 @@ footer div.payments {
         background: #e5e5e5; }
       footer div.payments div.content div.right p:last-of-type {
         margin-left: 3.1rem; }
+
+footer div.communication {
+  width: 100%;
+  background: #558540;
+  padding-top: 2.2rem;
+  padding-bottom: 1.4rem; }
+  footer div.communication div.content {
+    max-width: 104.5rem;
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    footer div.communication div.content form.newsletter {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-family: Lato, sans-serif;
+      font-size: 1.6rem;
+      font-weight: normal;
+      color: #fcffff; }
+      footer div.communication div.content form.newsletter input[type="email"] {
+        padding: 1rem;
+        margin-left: 1.3rem;
+        margin-right: 0;
+        max-width: 19rem; }
+      footer div.communication div.content form.newsletter input[type="submit"] {
+        font-family: Lato, sans-serif;
+        font-size: 1.4rem;
+        font-weight: normal;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-left: 0;
+        border: none;
+        background: #333231;
+        padding: 1rem 1.4rem;
+        cursor: pointer; }
+    footer div.communication div.content div.relations {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-family: Lato, sans-serif;
+      font-size: 1.6rem;
+      font-weight: normal;
+      color: #fcffff; }
+      footer div.communication div.content div.relations img {
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-left: 1.4rem; }
+        footer div.communication div.content div.relations img:first-of-type {
+          margin-left: 1.9rem; }
+        footer div.communication div.content div.relations img:hover {
+          cursor: pointer; }
+        footer div.communication div.content div.relations img:active {
+          -webkit-transform: scale(0.8);
+                  transform: scale(0.8); }
+    footer div.communication div.content a.discover {
+      font-family: Lato, sans-serif;
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: #fcffff;
+      text-transform: uppercase;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      max-width: 15.4rem; }
+      footer div.communication div.content a.discover img {
+        margin-left: 2rem;
+        margin-top: 0.3rem; }
+
+footer div.links {
+  width: 100%;
+  background: white;
+  padding-top: 3.4rem;
+  padding-bottom: 2.1rem; }
+  footer div.links div.content {
+    max-width: 104.5rem;
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    footer div.links div.content div.brand, footer div.links div.content div.plus, footer div.links div.content div.sav, footer div.links div.content div.quality, footer div.links div.content div.conseil {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      max-width: 20%; }
+    footer div.links div.content h4 {
+      font-family: Lato, sans-serif;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #333231;
+      margin-bottom: 2rem; }
+    footer div.links div.content a {
+      font-family: Lato, sans-serif;
+      font-size: 1.2rem;
+      font-weight: normal;
+      line-height: 1.67;
+      color: #62605e;
+      text-decoration: underline; }
+      footer div.links div.content a:hover, footer div.links div.content a:active {
+        color: #558540; }
+    footer div.links div.content p {
+      font-family: Lato, sans-serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      line-height: 1.67;
+      color: #62605e; }
+    footer div.links div.content div.brand p {
+      padding-bottom: 3.1rem; }
+    footer div.links div.content div.quality a:not(:last-of-type) {
+      margin-bottom: 1.5rem; }
+    footer div.links div.content div.conseil a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-family: Lato, sans-serif;
+      font-size: 1.6rem;
+      font-weight: bold;
+      line-height: 1.69;
+      text-align: center;
+      color: #f19319;
+      text-decoration: none;
+      padding: 1.5rem;
+      background: #393939;
+      margin-top: 2.8rem; }
+      footer div.links div.content div.conseil a img {
+        margin-right: 1rem; }

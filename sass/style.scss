@@ -1,3 +1,5 @@
+@import "boxs";
+
 /*
 *********reset css *******
 */
@@ -33,77 +35,6 @@ a {
   text-decoration: none;
 }
 
-@mixin  container {
-  max-width: 104.5rem;
-  height: 100%;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@mixin box0 {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-}
-
-@mixin box1 {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin box2 {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-@mixin box3 {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-@mixin box4 {
-  display: flex;
-  flex-flow: row-reverse nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-@mixin box5 {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-@mixin box6 {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-}
-
-@mixin box7 {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: start;
-}
-
-@mixin box8 {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 /*
 ***** header ****
 */
@@ -123,7 +54,7 @@ header {
         }
         &.help {
           @include text-help;
-          & span {
+          & a {
             color: $squash;
             padding-left: 0.3rem;
           }
@@ -386,7 +317,7 @@ section {
               & img {
                 position: absolute;
                 right: 1rem;
-                top: 50%;
+                top: calc(50% - 0.2rem);
                 //margin-left: -2rem;
                 pointer-events: none;
               }
@@ -504,7 +435,7 @@ section {
             margin-left: 2.3rem;
             & a {
               position: absolute;
-              top: calc(50% - 2.3rem);
+              top: calc(50% - 4.6rem);
               height: 4.6rem;
               width: 4.6rem;
               background: white;
@@ -648,4 +579,122 @@ footer {
     }
   }
 
+  & div.communication {
+    width: 100%;
+    background: $fern-green;
+    padding-top: 2.2rem;
+    padding-bottom: 1.4rem;
+    & div.content {
+      @include container;
+      @include box1;
+
+      & form.newsletter {
+        @include box1;
+        @include text-footer-band3-newsletter;
+        & input {
+          &[type="email"] {
+            padding: 1rem;
+            margin-left: 1.3rem;
+            margin-right: 0;
+            max-width: 19rem;
+          }
+          &[type="submit"] {
+            @include text-btn-newsletter;
+            margin-left: 0;
+            border: none;
+            background: $black;
+            padding: 1rem 1.4rem;
+            cursor: pointer;
+          }
+        }
+      }
+
+      & div.relations {
+        @include box1;
+        @include text-footer-band3-newsletter;
+        & img {
+          width: 3.2rem;
+          height: 3.2rem;
+          margin-left: 1.4rem;
+          &:first-of-type {
+            margin-left: 1.9rem;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          &:active {
+            transform: scale(0.8);
+          }
+        }
+      }
+
+      & a.discover {
+        @include text-footer-band3-see;
+        @include box7;
+        max-width: 15.4rem;
+
+        & img {
+          margin-left: 2rem;
+          margin-top: 0.3rem;
+        }
+      }
+    }
+  }
+
+  & div.links {
+    width: 100%;
+    background: white;
+    padding-top: 3.4rem;
+    padding-bottom: 2.1rem;
+    & div.content {
+      @include container;
+      @include box7;
+
+      & div.brand, & div.plus, & div.sav, & div.quality, & div.conseil {
+        @include box5;
+        max-width: 20%;
+      }
+
+      & h4 {
+        @include text-footer-band4-title;
+        margin-bottom: 2rem;
+      }
+
+      & a {
+        @include text-footer-band4-links;
+        &:hover, &:active {
+          color: $fern-green;
+        }
+      }
+
+      & p {
+        @include text-footer-band4-p;
+      }
+
+      & div.brand {
+        & p {
+          padding-bottom: 3.1rem;
+        }
+      }
+
+      & div.quality {
+        & a:not(:last-of-type) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      & div.conseil {
+        & a {
+          @include box1;
+          @include text-footer-band4-btn-phone;
+          padding: 1.5rem;
+          background: $black1;
+          margin-top: 2.8rem;
+          & img {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
 }

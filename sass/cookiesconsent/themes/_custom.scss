@@ -1,0 +1,52 @@
+@import "../_variables";
+@import "../../fonts";
+@import "../../colors";
+@import "../../boxs";
+
+.cc_container {
+
+  background: $pale-grey;
+  @include text-coockies;
+
+  .cc_message {
+    @include container;
+    @include box8;
+  }
+
+  .cc_btn,
+  .cc_btn:visited {
+    color: #000;
+    font-size: 2rem;
+    background: none;
+  }
+
+  .cc_btn:hover,
+  .cc_btn:active {
+    background-color: darken($pale-grey, 5%);
+    border-radius: 0.5rem;
+    color: #000;
+  }
+
+  .cc_more_info {
+    @include text-coockies;
+    text-decoration: underline;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+    color: #31a8f0;
+    transition: 200ms color;
+  }
+
+  a:hover,
+  a:active {
+    color: #555;
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .cc_container {
+
+  }
+}
