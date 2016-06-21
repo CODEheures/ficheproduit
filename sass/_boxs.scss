@@ -68,3 +68,10 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+@mixin box9 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

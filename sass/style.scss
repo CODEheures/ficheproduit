@@ -158,6 +158,55 @@ header {
         }
       }
     }
+    & div.menu {
+      z-index: 2;
+      background: white;
+      width: 100%;
+      position: absolute;
+      border: solid 0.1rem $light-grey;
+      & .content {
+        @include container;
+        @include box5;
+        padding-bottom: 5.2rem;
+        & div.all {
+          @include box2;
+          padding-top: 2.6rem;
+          padding-bottom: 3.7rem;
+          & img {
+            height: 0.9rem;
+            padding-left: 1rem;
+          }
+          & a {
+            @include text-menu-all;
+          }
+        }
+        & div.categories {
+          @include box9;
+          width: 100%;
+          & h2 {
+            @include text-menu-title;
+            margin-bottom: 2.1rem;
+          }
+          & a {
+            @include text-menu-list;
+            &:before {
+              background-image: url('/css/assets/triangle.svg');
+              background-size: 9px 9px;
+              display: inline-block;
+              width: 9px;
+              height: 9px;
+              content:"";
+              margin-bottom: 0.1rem;
+              margin-right: 0.6rem;
+            }
+          }
+          & div.categorie {
+            @include box5;
+            padding-right: 9rem;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -386,7 +435,7 @@ section {
           }
         }
       }
-      & div.tab1 {
+      & div.tab {
         @include box7;
         padding-top: 3.1rem;
         padding-bottom: 3.4rem;
@@ -394,6 +443,10 @@ section {
         padding-right: 3.1rem;
         background: white;
         width: 100%;
+        display: none;
+        &.active {
+          display: flex;
+        }
         & div.title {
           @include box2;
           width: 100%;

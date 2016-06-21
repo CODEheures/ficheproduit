@@ -309,6 +309,101 @@ header {
           text-align: center;
           color: #f19319;
           padding-right: 1.4rem; }
+    header nav div.menu {
+      z-index: 2;
+      background: white;
+      width: 100%;
+      position: absolute;
+      border: solid 0.1rem #eee8e3; }
+      header nav div.menu .content {
+        max-width: 104.5rem;
+        height: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        padding-bottom: 5.2rem; }
+        header nav div.menu .content div.all {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          padding-top: 2.6rem;
+          padding-bottom: 3.7rem; }
+          header nav div.menu .content div.all img {
+            height: 0.9rem;
+            padding-left: 1rem; }
+          header nav div.menu .content div.all a {
+            font-family: Lato, sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: -0.1px;
+            color: #558540;
+            text-transform: uppercase; }
+        header nav div.menu .content div.categories {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          width: 100%; }
+          header nav div.menu .content div.categories h2 {
+            font-family: Lato, sans-serif;
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: -0.1px;
+            color: #626262;
+            text-transform: uppercase;
+            margin-bottom: 2.1rem; }
+          header nav div.menu .content div.categories a {
+            font-family: Lato, sans-serif;
+            font-size: 1.4rem;
+            font-weight: normal;
+            line-height: 1.93;
+            color: #626262; }
+            header nav div.menu .content div.categories a:before {
+              background-image: url("/css/assets/triangle.svg");
+              background-size: 9px 9px;
+              display: inline-block;
+              width: 9px;
+              height: 9px;
+              content: "";
+              margin-bottom: 0.1rem;
+              margin-right: 0.6rem; }
+          header nav div.menu .content div.categories div.categorie {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            padding-right: 9rem; }
 
 /*
 ********* Section *********
@@ -644,7 +739,7 @@ section {
             text-transform: uppercase;
             margin-bottom: 0;
             background: white; }
-      section article.tabs div.tab1 {
+      section article.tabs div.tab {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -661,8 +756,13 @@ section {
         padding-left: 1.45rem;
         padding-right: 3.1rem;
         background: white;
-        width: 100%; }
-        section article.tabs div.tab1 div.title {
+        width: 100%;
+        display: none; }
+        section article.tabs div.tab.active {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+        section article.tabs div.tab div.title {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -676,14 +776,14 @@ section {
                   align-items: center;
           width: 100%;
           margin-bottom: 3.3rem; }
-          section article.tabs div.tab1 div.title h2 {
+          section article.tabs div.tab div.title h2 {
             font-family: Lato, sans-serif;
             font-size: 2.2rem;
             font-weight: bold;
             line-height: 1.55;
             color: #333231;
             padding-left: 1.23rem; }
-        section article.tabs div.tab1 div.left {
+        section article.tabs div.tab div.left {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -696,28 +796,28 @@ section {
               -ms-flex-align: center;
                   align-items: center;
           padding-right: 5.45rem; }
-          section article.tabs div.tab1 div.left div.argument {
+          section article.tabs div.tab div.left div.argument {
             padding-left: 1.15rem; }
-            section article.tabs div.tab1 div.left div.argument div.title {
+            section article.tabs div.tab div.left div.argument div.title {
               margin-bottom: 1.7rem; }
-              section article.tabs div.tab1 div.left div.argument div.title h3 {
+              section article.tabs div.tab div.left div.argument div.title h3 {
                 font-family: Lato, sans-serif;
                 font-size: 1.8rem;
                 font-weight: bold;
                 line-height: 1.67;
                 color: #333231;
                 padding-left: 1.23rem; }
-            section article.tabs div.tab1 div.left div.argument p {
+            section article.tabs div.tab div.left div.argument p {
               font-family: Lato, sans-serif;
               font-size: 1.4rem;
               font-weight: normal;
               line-height: 1.64;
               color: #62605e;
               margin-top: 1rem; }
-            section article.tabs div.tab1 div.left div.argument:not(:last-of-type) p:last-child {
+            section article.tabs div.tab div.left div.argument:not(:last-of-type) p:last-child {
               border-bottom: solid 1px #eee8e3;
               padding-bottom: 3.1rem; }
-        section article.tabs div.tab1 div.right {
+        section article.tabs div.tab div.right {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -729,7 +829,7 @@ section {
           -webkit-box-align: center;
               -ms-flex-align: center;
                   align-items: center; }
-          section article.tabs div.tab1 div.right div.photo {
+          section article.tabs div.tab div.right div.photo {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -743,20 +843,20 @@ section {
                     align-items: center;
             position: relative;
             margin-left: 2.3rem; }
-            section article.tabs div.tab1 div.right div.photo a {
+            section article.tabs div.tab div.right div.photo a {
               position: absolute;
               top: calc(50% - 4.6rem);
               height: 4.6rem;
               width: 4.6rem;
               background: white;
               text-align: center; }
-              section article.tabs div.tab1 div.right div.photo a.back {
+              section article.tabs div.tab div.right div.photo a.back {
                 left: -1.3rem; }
-              section article.tabs div.tab1 div.right div.photo a.next {
+              section article.tabs div.tab div.right div.photo a.next {
                 right: -1.3rem; }
-              section article.tabs div.tab1 div.right div.photo a img {
+              section article.tabs div.tab div.right div.photo a img {
                 margin-top: 0.9rem; }
-            section article.tabs div.tab1 div.right div.photo p {
+            section article.tabs div.tab div.right div.photo p {
               font-family: Lato, sans-serif;
               font-size: 1.6rem;
               font-weight: bold;
