@@ -1,5 +1,7 @@
 @mixin  container {
-  max-width: 104.5rem;
+  max-width: 106.5rem;
+  padding-left: 0;
+  padding-right: 0;
   height: 100%;
   width: 100%;
   margin-left: auto;
@@ -29,7 +31,7 @@
 
 @mixin box3 {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -74,4 +76,60 @@
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+@mixin box10 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+@mixin box11 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin box12 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box13 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@mixin box14 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin box15 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+@mixin box16 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+@mixin box17 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
 }

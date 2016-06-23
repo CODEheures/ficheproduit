@@ -40,183 +40,215 @@
 <body>
 <header>
     <div class="heading-sup">
-        <div class="content">
+        <div class="container">
             <p class="help"><img src="/css/assets/phone.png" alt="phone"/>Besoin d’aide ? Contactez nous du lundi au
                 vendredi de 8h30 à 18h :<a href="tel:+33800000000"> 08 00 00 00 00</a></p>
             <p class="store"><img src="/css/assets/location.png" alt="lieu"/><a href="#">Nos Magasins</a></p>
         </div>
     </div>
     <div class="heading-main">
-        <div class="content">
+        <div class="container">
+            <div class="hamburger">
+                <a href="#" title="menu"><img src="/css/assets/burger-close.svg" alt="menu"></a>
+            </div>
             <div class="logo">
                 <img src="/css/assets/nature_leaf.png" alt="logo"/>
                 <a href="/" title="Site sport et nature">sport et nature</a>
             </div>
             <form class="search" action="#">
-                <label for="search"><img src="/css/assets/search.png" alt="loupe"/></label>
-                <input type="search" name="search" id="search" placeholder="Je cherche un produit, une marque, etc..."/>
+                <label for="search1"><img src="/css/assets/search.png" alt="loupe"/></label>
+                <input type="search" name="search" id="search1"
+                       placeholder="Je cherche un produit, une marque, etc..."/>
             </form>
             <div class="account">
-                <img src="/css/assets/user.png" alt="utilisateur"/>
-                <a href="#" title="vers mon compte">Mon compte</a>
+                <a href="#" title="vers mon compte"><img src="/css/assets/user.png"
+                                                         alt="utilisateur"/><span>Mon compte</span></a>
             </div>
             <div class="separator"></div>
             <div class="cart">
-                <img src="/css/assets/shopping_cart.png" alt="caddie"/>
-                <a href="#" title="vers mon panier">Panier</a>
+                <a href="#" title="vers mon panier"><img src="/css/assets/shopping_cart.png"
+                                                         alt="caddie"/><span>Panier</span></a>
             </div>
         </div>
     </div>
     <nav>
-        <div class="content">
-            <ul>
-                <li class="active">
-                    <a href="#" title="menu chaussures"  class="main-menu" data-menu="chaussures">chaussures</a>
+        <div class="container">
+            <ul class="primary">
+                <li>
+                    <a href="#" title="menu chaussures" class="menu-link" data-menu="chaussures">chaussures</a>
+                    <ul class="secondary">
+                            <li class="menu-all">
+                                <a href="#" title="tous" class="menu-link">Voir toutes les chaussures</a>
+                                <img src="/css/assets/triangle.svg" alt="triangle">
+                            </li>
+                            <li>
+                                <a href="#" title="homme" class="menu-link">Homme sport</a>
+                                <ul class="third">
+                                    <li><a href="#">Running - Trail - Athlétisme</a></li>
+                                    <li><a href="#">Randonnée - Montagne</a></li>
+                                    <li><a href="#">Sport d'équipe</a></li>
+                                    <li><a href="#">Sport de raquette</a></li>
+                                    <li><a href="#">Natation - Piscine</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" title="femme" class="menu-link">Femme sport</a>
+                                <ul class="third">
+                                    <li><a href="#">Running - Trail - Athlétisme</a></li>
+                                    <li><a href="#">Randonnée - Montagne</a></li>
+                                    <li><a href="#">Sport d'équipe</a></li>
+                                    <li><a href="#">Sport de raquette</a></li>
+                                    <li><a href="#">Natation - Piscine</a></li>
+                                    <li><a href="#">Sport de combat</a></li>
+                                    <li><a href="#">Vélo</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" title="enfant" class="menu-link">Enfant sport</a>
+                                <ul class="third">
+                                    <li><a href="#">Sport d'équipe</a></li>
+                                    <li><a href="#">Sport de raquette</a></li>
+                                    <li><a href="#">Danse</a></li>
+                                    <li><a href="#">Equitation - Golf</a></li>
+                                    <li><a href="#">Natation - Piscine</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" title="accessoires" class="menu-link">Accessoires</a>
+                                <ul class="third">
+                                    <li><a href="#">Semelles - Lacets</a></li>
+                                    <li><a href="#">Entretien</a></li>
+                                    <li><a href="#">Crampons</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                 </li>
                 <li>
-                    <a href="#" title="menu vetements"  class="main-menu" data-menu="vetements">vêtements</a>
+                    <a href="#" title="menu vetements" class="menu-link" data-menu="vetements">vêtements</a>
+                    <ul class="secondary">
+                        <li class="menu-all">
+                            <a href="#" title="tous" class="menu-link">Voir toutes les vêtements</a>
+                            <img src="/css/assets/triangle.svg" alt="triangle">
+                        </li>
+                        <li>
+                            <a href="#" title="homme" class="menu-link">Vêtements homme</a>
+                            <ul class="third">
+                                <li><a href="#">Running - Trail - Athlétisme</a></li>
+                                <li><a href="#">Randonnée - Montagne</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title="femme" class="menu-link">Vêtements femme</a>
+                            <ul class="third">
+                                <li><a href="#">Running - Trail - Athlétisme</a></li>
+                                <li><a href="#">Randonnée - Montagne</a></li>
+                                <li><a href="#">Vélo</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title="enfant" class="menu-link">Vêtements enfant</a>
+                            <ul class="third">
+                                <li><a href="#">Sport d'équipe</a></li>
+                                <li><a href="#">Natation - Piscine</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title="accessoires" class="menu-link">Bonnets</a>
+                            <ul class="third">
+                                <li><a href="#">de bain</a></li>
+                                <li><a href="#">de neige</a></li>
+                                <li><a href="#">d'été</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#" title="menu randonnée"  class="main-menu" data-menu="randonnée">randonnée</a>
+                    <a href="#" title="menu randonnée" class="menu-link" data-menu="randonnée">randonnée</a>
+                    <ul class="secondary">
+                        <li class="menu-all">
+                            <a href="#" title="tous" class="menu-link">Voir toutes les randonnées</a>
+                            <img src="/css/assets/triangle.svg" alt="triangle">
+                        </li>
+                        <li>
+                            <a href="#" title="homme" class="menu-link">Homme</a>
+                            <ul class="third">
+                                <li><a href="#">Chaussure de rando</a></li>
+                                <li><a href="#">Vetement de rando</a></li>
+                                <li><a href="#">Sacs de rando</a></li>
+                                <li><a href="#">Trucs de rando</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title="femme" class="menu-link">Femme</a>
+                            <ul class="third">
+                                <li><a href="#">Chaussure de rando</a></li>
+                                <li><a href="#">Vetement de rando</a></li>
+                                <li><a href="#">Sacs de rando</a></li>
+                                <li><a href="#">Trucs de rando</a><li></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title="accessoires" class="menu-link">Accessoires</a>
+                            <ul class="third">
+                                <li><a href="#">boussoles</a></li>
+                                <li><a href="#">kit de survie</a></li>
+                                <li><a href="#">kit de l'euro2016</a><li></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#" title="menu pêche"  class="main-menu" data-menu="pêche">pêche</a>
+                    <a href="#" title="menu pêche" class="menu-link" data-menu="pêche">pêche</a>
+                    <ul class="secondary">
+                        <li class="menu-all">
+                            <a href="#" title="tous" class="menu-link">Voir toutes les articles de pêche</a>
+                            <img src="/css/assets/triangle.svg" alt="triangle">
+                        </li>
+                        <li>
+                            <a href="#" title="au gros" class="menu-link">Pêche au gros</a>
+                            <ul class="third">
+                                <li><a href="#">Trucs de pêche au gros</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title="à la mouche" class="menu-link">Pêche à la mouche</a>
+                            <ul class="third">
+                                <li><a href="#">Trucs de pêche à la mouche</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <p class="map">
                 <img src="/css/assets/map.png" alt="carte itinéraire"/>
                 <a href="#" title="vers la carte">cartes et itinéraires</a>
             </p>
-        </div>
-        <div id="menu-chaussures" class="menu">
-            <div class="content">
-                <div class="all">
-                    <a href="#">Voir toutes les chaussures</a>
-                    <img src="/css/assets/triangle.svg" alt="triangle">
-                </div>
-                <div class="categories">
-                    <div class="categorie hommes">
-                        <h2>homme sport</h2>
-                        <a href="#">Running - Trail - Athlétisme</a>
-                        <a href="#">Randonnée - Montagne</a>
-                        <a href="#">Sport d'équipe</a>
-                        <a href="#">Sport de raquette</a>
-                        <a href="#">Natation - Piscine</a>
-                    </div>
-                    <div class="categorie femmes">
-                        <h2>femmes sport</h2>
-                        <a href="#">Running - Trail - Athlétisme</a>
-                        <a href="#">Randonnée - Montagne</a>
-                        <a href="#">Sport d'équipe</a>
-                        <a href="#">Sport de raquette</a>
-                        <a href="#">Natation - Piscine</a>
-                        <a href="#">Sport de combat</a>
-                        <a href="#">Vélo</a>
-                    </div>
-                    <div class="categorie enfants">
-                        <h2>enfants sport</h2>
-                        <a href="#">Sport d'équipe</a>
-                        <a href="#">Sport de raquette</a>
-                        <a href="#">Danse</a>
-                        <a href="#">Equitation - Golf</a>
-                        <a href="#">Natation - Piscine</a>
-                    </div>
-                    <div class="categorie accessoires">
-                        <h2>accessoires</h2>
-                        <a href="#">Semelles - Lacets</a>
-                        <a href="#">Entretien</a>
-                        <a href="#">Crampons</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="menu-vetements" class="menu">
-            <div class="content">
-                <div class="all">
-                    <a href="#">Voir toutes les vêtements</a>
-                    <img src="/css/assets/triangle.svg" alt="triangle">
-                </div>
-                <div class="categories">
-                    <div class="categorie hommes">
-                        <h2>homme sport</h2>
-                        <a href="#">Running - Trail - Athlétisme</a>
-                    </div>
-                    <div class="categorie femmes">
-                        <h2>femmes sport</h2>
-                        <a href="#">Running - Trail - Athlétisme</a>
-                        <a href="#">Randonnée - Montagne</a>
-                        <a href="#">Vélo</a>
-                    </div>
-                    <div class="categorie enfants">
-                        <h2>enfants sport</h2>
-                        <a href="#">Sport d'équipe</a>
-                        <a href="#">Natation - Piscine</a>
-                    </div>
-                    <div class="categorie accessoires">
-                        <h2>bonnets</h2>
-                        <a href="#">de bain</a>
-                        <a href="#">de neige</a>
-                        <a href="#">d'été</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="menu-randonnée" class="menu">
-            <div class="content">
-                <div class="all">
-                    <a href="#">Voir toutes les randonnées (??.. hein)</a>
-                    <img src="/css/assets/triangle.svg" alt="triangle">
-                </div>
-                <div class="categories">
-                    <div class="categorie homme">
-                        <h2>homme randonnée</h2>
-                        <a href="#">Chaussure de rando</a>
-                        <a href="#">Vetement de rando</a>
-                        <a href="#">Sacs de rando</a>
-                        <a href="#">Trucs de rando</a>
-                    </div>
-                    <div class="categorie femmes">
-                        <h2>femmes randonnée</h2>
-                        <a href="#">Chaussure de rando</a>
-                        <a href="#">Vetement de rando</a>
-                        <a href="#">Sacs de rando</a>
-                        <a href="#">Trucs de rando</a>
-                    </div>
-                    <div class="categorie accessoires">
-                        <h2>accessoires</h2>
-                        <a href="#">boussoles</a>
-                        <a href="#">kit de survie</a>
-                        <a href="#">kit de l'euro2016</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="menu-pêche" class="menu">
-            <div class="content">
-                <div class="all">
-                    <a href="#">Voir tous les articles de pêche</a>
-                    <img src="/css/assets/triangle.svg" alt="triangle">
-                </div>
-                <div class="categories">
-                    <div class="categorie au-gros">
-                        <h2>pêche au gros</h2>
-                        <a href="#">Trucs de pêches au gros</a>
-                    </div>
-                    <div class="categorie a-la-mouche">
-                        <h2>pêche à la mouche</h2>
-                        <a href="#">Trucs de pêches à la mouche</a>
-                    </div>
-                </div>
+            <div class="phone-location">
+                <p class="help"><img src="/css/assets/phone.png" alt="phone"/><a href="tel:+33800000000"> 08 00 00 00 00</a></p>
+                <p class="store"><img src="/css/assets/location.png" alt="lieu"/><a href="#">Nos Magasins</a></p>
             </div>
         </div>
     </nav>
+    <div class="desktopMenu">
+        <div class="container"></div>
+    </div>
+    <div class="search">
+        <div class="container">
+            <form class="search" action="#">
+                <label for="search2"><img src="/css/assets/search.png" alt="loupe"/></label>
+                <input type="search" name="search" id="search2"
+                       placeholder="Je cherche un produit, une marque, etc..."/>
+            </form>
+        </div>
+    </div>
 </header>
 <section>
-    <article class="product">
+    <article class="container product">
         <div class="ariane">
             <p>Accueil > Niveau 1 > Nom du produit ici.</p>
         </div>
         <div class="presentation">
+            <h1>Chaussures de Randonnée Geoxiflux Homme</h1>
             <div class="vignettes">
                 <p><a href="#" title="vue coté 1"><img src="/img/productv1.png" alt="vue de coté 1"/></a></p>
                 <p><a href="#" title="vue coté 2"><img src="/img/productv2.png" alt="vue de coté 2"/></a></p>
@@ -318,7 +350,7 @@
         </div>
     </article>
 
-    <article class="tabs">
+    <article class="container tabs">
         <div class="selectors">
             <a href="#" title="description" class="tab-selector active" data-tab="tab1">description</a>
             <a href="#" title="caractristiques" class="tab-selector" data-tab="tab2">caractéristiques</a>
@@ -415,7 +447,7 @@
         </div>
     </article>
 
-    <article class="recommandations">
+    <article class="container recommandations">
         <h2>Nos clients ayant acheté ce produit ont aussi acheté </h2>
         <div class="list">
             <ul>
@@ -493,7 +525,7 @@
 </section>
 <footer>
     <div class="advantages">
-        <div class="content">
+        <div class="container">
             <ul>
                 <li>
                     <img src="/css/assets/truck.png" alt="camion"/>
@@ -519,7 +551,7 @@
         </div>
     </div>
     <div class="payments">
-        <div class="content">
+        <div class="container">
             <div class="left">
                 <ul>
                     <li>
@@ -543,7 +575,7 @@
         </div>
     </div>
     <div class="communication">
-        <div class="content">
+        <div class="container">
             <form class="newsletter" action="#">
                 <label for="email">Notre newsletter :</label>
                 <input type="email" name="email" id="email"/>
@@ -563,7 +595,7 @@
         </div>
     </div>
     <div class="links">
-        <div class="content">
+        <div class="container">
             <div class="brand">
                 <h4>Notre marque</h4>
                 <p>
@@ -610,6 +642,7 @@
         </div>
     </div>
 </footer>
+<div class="mediaspy"></div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 <script type="text/javascript" src="/js/setn.js"></script>
 </body>

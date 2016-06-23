@@ -1,14 +1,15 @@
 @import "boxs";
-
 /*
 *********reset css *******
 */
 @import "reset";
+
 .clearfix:after {
-  content:"";
+  content: "";
   display: table;
   clear: both;
 }
+
 /*
 ******** Vars *********
 */
@@ -33,6 +34,13 @@ body {
 
 a {
   text-decoration: none;
+  &:visited {
+    color: initial;
+  }
+}
+
+.container {
+  @include container;
 }
 
 /*
@@ -40,83 +48,84 @@ a {
 */
 header {
   width: 100%;
+  @include box10;
 
   & .heading-sup {
-    background: $black1;
-    height: 3.3rem;
-    & .content {
-      @include container;
-      @include box1;
-      & p {
-        @include box2;
-        & img {
-          padding-right: 1.4rem;
-        }
-        &.help {
-          @include text-help;
-          & a {
-            color: $squash;
-            padding-left: 0.3rem;
-          }
-        }
-        &.store a {
-          @include text-stores;
-        }
-      }
-    }
+    display: none;
   }
 
   & .heading-main {
-    background: white;
-    height: 9.3rem;
-    & .content {
-      @include container;
+    background: $pale-grey2;
+    border: solid 1px $light-grey;
+    height: 5.3rem;
+    & .container {
       @include box3;
-
       & .logo {
         @include box2;
         & img {
           z-index: 2;
+          height: 5rem;
         }
         & a {
           background: $black1;
           @include text-brand;
-          padding-top: 0.4rem;
-          padding-bottom: 0.4rem;
+          padding-top: 0.79rem;
+          padding-bottom: 0.66rem;
           padding-left: 2rem;
-          padding-right: 1.3rem;
+          padding-right: 0.76rem;
           margin-left: -2rem;
         }
       }
 
       & form.search {
-        @include box4;
-        & label {
-          z-index: 2;
-          margin-left: -3.5rem;
-        }
-        & input {
-          @include text-placeholder;
-          width: 38rem;
-          height: 3.9rem;
-          padding-right: 4rem;
-          padding-left: 1.2rem;
-        }
+        display: none;
       }
 
       & div.separator {
         width: 0.1rem;
         height: 4.3rem;
         background: $light-grey;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
       }
 
       & div.account, & div.cart {
-        @include box2;
-        & img {
-          padding-right: 1.7rem;
-        }
         & a {
           @include text-menu-secondary;
+          & img {
+            padding-right: 0;
+            vertical-align: bottom;
+          }
+          & span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  & div.search {
+    & div.container {
+      @include box3;
+      margin-top: 1.3rem;
+      margin-bottom: 1.3rem;
+      & form.search {
+        @include box4;
+        width: 90%;
+        max-width: none;
+        min-width: 31rem;
+        margin-right: 1rem;
+        & label {
+          z-index: 2;
+          margin-left: -3.5rem;
+        }
+        & input {
+          @include text-placeholder;
+          width: 100%;
+          height: 3.9rem;
+          padding-right: 4rem;
+          padding-left: 1.2rem;
+          border: solid 0.1rem $light-grey;
         }
       }
     }
@@ -125,28 +134,107 @@ header {
   & nav {
     background: $white-two;
     border: solid 0.1rem $light-grey;
-    height: 5.3rem;
-    & .content {
-      @include container;
-      @include box1;
+    height: auto;
+    & .container {
+      @include box10;
       & ul {
-        @include box2;
+        @include box8;
         & li {
-          & a {
-            @include text-menu-primary;
+          width: 100%;
+          &:not(:last-of-type) {
+            border-bottom: 0.1rem solid $light-grey;
           }
-          &:not(:last-of-type){
-            margin-right: 4.2rem;
+          & a {
+            @include box1;
+            @include text-menu-primary;
+            &:active {
+              color: $fern-green !important;
+            }
           }
           &.active {
-            border-bottom: 0.5rem solid $fern-green;
+            & > a {
+              color: $fern-green !important;
+            }
+            & > a:after {
+              content: url('/css/assets/moins.png');
+            }
+          }
+          &:not(.active) {
+            & > a:after {
+              content: url('/css/assets/plus.png');
+            }
+          }
+        }
+        &.primary > li {
+          width: 90%;
+          display: none;
+          & a {
+            @include text-menu-primary;
+            padding-top: 2.6rem;
+            padding-bottom: 2.2rem;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            line-height: 1;
+          }
+        }
+        &.secondary > li {
+          padding-left: 0.9rem;
+          &.menu-all {
+            @include box2;
+            & a {
+              @include text-menu-all;
+              &:after {
+                content: "";
+              }
+            }
+            & img {
+              height: 0.9rem;
+            }
+          }
+          & a {
+            font-size: 1.4rem;
+            padding-top: 1.8rem;
+            padding-bottom: 1.8rem;
+            &:after {
+              transform: scale(0.8);
+            }
+            &:active {
+              color: $fern-green;
+            }
+          }
+        }
+        &.third > li {
+          border: none;
+          &:active {
+            border-bottom: 0.1rem solid $light-grey;
+          }
+          & a {
+            @include box2;
+            padding-top: 0;
+            padding-bottom: 0;
+            line-height: 1.94;
+            padding-left: 2.2rem;
+          }
+          & a:after {
+            content: "";
+          }
+          & a:before {
+            background-image: url('/css/assets/triangle.svg');
+            background-size: 0.9rem 0.9rem;
+            display: inline-block;
+            width: 0.9rem;
+            height: 0.9rem;
+            content: "";
+            margin-bottom: 0.1rem;
+            margin-right: 0.6rem;
           }
         }
       }
       & .map {
-        @include box2;
+        @include box12;
         background: $black1;
-        height: 100%;
+        height: 6rem;
+        width: 100%;
         & img {
           padding-left: 1.3rem;
           padding-right: 1.3rem;
@@ -154,59 +242,80 @@ header {
         & a {
           @include text-menu-primary-reverse;
           padding-right: 1.4rem;
-
         }
       }
-    }
-    & div.menu {
-      z-index: 2;
-      background: white;
-      width: 100%;
-      position: absolute;
-      border: solid 0.1rem $light-grey;
-      & .content {
-        @include container;
-        @include box5;
-        padding-bottom: 5.2rem;
-        & div.all {
-          @include box2;
-          padding-top: 2.6rem;
-          padding-bottom: 3.7rem;
+      & .phone-location {
+        @include box17;
+        background: white;
+        padding-top: 1rem;
+        padding-bottom: 1.4rem;
+        & p {
+          @include box12;
+          background: $black1;
+          padding-left: 1rem;
+          padding-right: 2rem;
+          & a {
+            @include text-stores;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+          }
           & img {
-            height: 0.9rem;
-            padding-left: 1rem;
-          }
-          & a {
-            @include text-menu-all;
-          }
-        }
-        & div.categories {
-          @include box9;
-          width: 100%;
-          & h2 {
-            @include text-menu-title;
-            margin-bottom: 2.1rem;
-          }
-          & a {
-            @include text-menu-list;
-            &:before {
-              background-image: url('/css/assets/triangle.svg');
-              background-size: 9px 9px;
-              display: inline-block;
-              width: 9px;
-              height: 9px;
-              content:"";
-              margin-bottom: 0.1rem;
-              margin-right: 0.6rem;
-            }
-          }
-          & div.categorie {
-            @include box5;
-            padding-right: 9rem;
+            margin-right: 1rem;
           }
         }
       }
     }
+
+    //a supprimer ***
+    & div.menu {
+      //z-index: 2;
+      //background: white;
+      //width: 100%;
+      //position: absolute;
+      //border: solid 0.1rem $light-grey;
+      //& .container {
+      //  @include box5;
+      //  padding-bottom: 5.2rem;
+      //  & div.all {
+      //    @include box2;
+      //    padding-top: 2.6rem;
+      //    padding-bottom: 3.7rem;
+      //    & img {
+      //      height: 0.9rem;
+      //      padding-left: 1rem;
+      //    }
+      //    & a {
+      //      @include text-menu-all;
+      //    }
+      //  }
+      //  & div.categories {
+      //    @include box9;
+      //    width: 100%;
+      //    & h2 {
+      //      @include text-menu-title;
+      //      margin-bottom: 2.1rem;
+      //    }
+      //    & a {
+      //      @include text-menu-list;
+      //      &:before {
+      //        background-image: url('/css/assets/triangle.svg');
+      //        background-size: 0.9rem 0.9rem;
+      //        display: inline-block;
+      //        width: 0.9rem;
+      //        height: 0.9rem;
+      //        content: "";
+      //        margin-bottom: 0.1rem;
+      //        margin-right: 0.6rem;
+      //      }
+      //    }
+      //    & div.categorie {
+      //      @include box5;
+      //      padding-right: 9rem;
+      //    }
+      //  }
+      //}
+    }
+    //***************
   }
 }
 
@@ -219,7 +328,6 @@ section {
   @include box5;
 
   & article {
-    @include container;
 
     &.product {
       background: white;
@@ -236,34 +344,47 @@ section {
         }
       }
       & div.presentation {
+        @include box14;
         width: 100%;
-        @include box0;
-
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        & > h1 {
+          display: flex;
+          align-self: flex-start;
+          @include text-product-title;
+          margin-top: 1rem;
+          width: 100%;
+        }
         & div.vignettes {
-          padding-left: 1.2rem;
+          @include box16;
+          width: 100%;
+          padding-right: 1.2rem;
           margin-top: 2.2rem;
           & p {
+            @include box14;
+            width: 5.6rem;
+            margin-right: 0.5rem;
             margin-bottom: 0.6rem;
-            border: solid 0.1rem $light-grey;
             padding-top: 0.4rem;
             padding-bottom: 0.4rem;
             padding-left: 0.1rem;
             padding-right: 0.1rem;
-            text-align: center;
+            border: solid 0.1rem $light-grey;
           }
         }
-
         & div.photo {
+          @include box12;
+          width: 100%;
           margin-top: 2.2rem;
         }
-
         & div.book {
+          order: 1;
+          max-width: 36.8rem;
           margin-top: 2.2rem;
           margin-bottom: 2.1rem;
-          max-width: 36.8rem;
+          margin-left: 0;
           & h1 {
-            @include text-product-title;
-            margin-bottom: 3.2rem;
+            display: none;
           }
           & table.avis {
             width: 100%;
@@ -282,7 +403,7 @@ section {
                 text-decoration: underline;
               }
               &.note {
-                font-size:0;
+                font-size: 0;
                 & img {
                   margin-left: 0.7rem;
                 }
@@ -315,17 +436,15 @@ section {
             }
           }
         }
-
         & form.purchase {
+          @include box5;
+          order: 0;
           padding-left: 1.2rem;
           padding-right: 1.2rem;
           padding-top: 2.3rem;
           padding-bottom: 2.4rem;
           border: solid 0.1rem $light-grey;
-          margin-right: 2.1rem;
           margin-bottom: 3.1rem;
-          margin-left: 2.9rem;
-          @include box5;
           & div.price {
             @include box1;
             width: 100%;
@@ -372,9 +491,7 @@ section {
               }
             }
 
-
           }
-
           & div.cart-add {
             padding-top: 1.9rem;
             padding-bottom: 1.4rem;
@@ -390,7 +507,6 @@ section {
               border-radius: 0.2rem;
             }
           }
-
           & div.stock {
             @include box1;
             padding-top: 1.9rem;
@@ -399,7 +515,6 @@ section {
               padding-left: 1.8rem;
             }
           }
-
           & div.expedition {
             @include box1;
             padding-top: 1.9rem;
@@ -579,8 +694,7 @@ footer {
     background: $black1;
     padding-top: 2.3rem;
     padding-bottom: 3.2rem;
-    & div.content {
-      @include container;
+    & div.container {
       & ul {
         @include box3;
         width: 100%;
@@ -598,8 +712,7 @@ footer {
     background: white;
     padding-top: 2.2rem;
     padding-bottom: 2rem;
-    & div.content {
-      @include container;
+    & div.container {
       @include box1;
       & ul {
         @include box1;
@@ -637,8 +750,7 @@ footer {
     background: $fern-green;
     padding-top: 2.2rem;
     padding-bottom: 1.4rem;
-    & div.content {
-      @include container;
+    & div.container {
       @include box1;
 
       & form.newsletter {
@@ -699,8 +811,7 @@ footer {
     background: white;
     padding-top: 3.4rem;
     padding-bottom: 2.1rem;
-    & div.content {
-      @include container;
+    & div.container {
       @include box7;
 
       & div.brand, & div.plus, & div.sav, & div.quality, & div.conseil {
@@ -745,6 +856,272 @@ footer {
           margin-top: 2.8rem;
           & img {
             margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 930px) {
+  header {
+    & div.heading-main div.container {
+      & div.account, & div.cart {
+        & a {
+          & img {
+            padding-right: 1.7rem;
+          }
+          & span {
+            display: initial;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 730px) {
+  div.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  header {
+    & div.heading-sup {
+      display: flex;
+      background: $black1;
+      height: 3.3rem;
+      & .container {
+        @include box1;
+        & p {
+          @include box2;
+          & img {
+            padding-right: 1.4rem;
+          }
+          &.help {
+            @include text-help;
+            & a {
+              color: $squash;
+              padding-left: 0.3rem;
+            }
+          }
+          &.store a {
+            @include text-stores;
+          }
+        }
+      }
+    }
+
+    & div.heading-main {
+      height: 9.3rem;
+      background: white;
+      border: none;
+      & div.container {
+        & div.hamburger {
+          display: none;
+        }
+        & div.logo {
+          & img {
+            height: auto;
+          }
+          & a {
+            background: $black1;
+            @include text-brand2;
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+            padding-right: 1.3rem;
+          }
+        }
+        & form.search {
+          @include box4;
+          width: 45%;
+          max-width: 38rem;
+          min-width: 31rem;
+          margin-right: 1rem;
+          & label {
+            z-index: 2;
+            margin-left: -3.5rem;
+          }
+          & input {
+            @include text-placeholder;
+            width: 100%;
+            height: 3.9rem;
+            padding-right: 4rem;
+            padding-left: 1.2rem;
+            border: solid 0.1rem $light-grey;
+          }
+        }
+        & div.account, & div.separator, & div.cart {
+          order: 1;
+        }
+      }
+    }
+
+    & div.search {
+      display: none;
+    }
+
+    & nav {
+      display: flex;
+      background: $white-two;
+      border: solid 0.1rem $light-grey;
+      height: 5.3rem;
+      & .container {
+        @include box1;
+        & ul {
+          &.primary {
+            @include box2;
+            & > li {
+              border-bottom: 0.5rem solid transparent;
+              & > a {
+                line-height: 3;
+                padding: 0;
+                &:after {
+                  content: "";
+                }
+              }
+              &:not(:last-of-type) {
+                margin-right: 4.2rem;
+              }
+              &.active {
+                border-bottom: 0.5rem solid $fern-green;
+              }
+            }
+          }
+
+        }
+        & .map {
+          @include box2;
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+
+    & div.desktopMenu {
+      border: solid 0.1rem $light-grey;
+      & .container {
+        @include box5;
+        & ul {
+          &.secondary {
+            @include box13;
+            width: 90%;
+            background: white;
+            z-index: 2;
+            height: auto;
+            & li {
+              border-bottom: none;
+              & a {
+                padding: 0;
+              }
+              &.menu-all {
+                @include box2;
+                width: 100%;
+                margin-top: 2.6rem;
+                margin-bottom: 3.7rem;
+                & a {
+                  @include text-menu-all;
+                }
+                & img {
+                  margin-left: 1rem;
+                  height: 0.9rem;
+                }
+              }
+            }
+
+            & >li:not(:first-of-type) {
+              width: auto;
+              &:not(:last-of-type) {
+
+              }
+              & > a {
+                @include text-menu-title;
+                cursor: none;
+                pointer-events: none;
+                padding-left: 0.9rem;
+                &:after {
+                  content:"";
+                  cursor: default;
+                  pointer-events: none;
+                }
+              }
+            }
+          }
+          &.third {
+            margin-top: 2.1rem;
+            margin-bottom: 5.2rem;
+            & li {
+              border-bottom: none;
+              & a {
+                @include text-menu-list;
+                text-transform: none;
+                &:hover, &:active {
+                  color: $fern-green;
+                }
+                &:before {
+                  background-image: url('/css/assets/triangle.svg');
+                  background-size: 0.9rem 0.9rem;
+                  display: inline-block;
+                  width: 0.9rem;
+                  height: 0.9rem;
+                  content: "";
+                  margin-bottom: 0.1rem;
+                  margin-right: 0.6rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 620px) {
+  section {
+    article {
+      &.product {
+        & div.presentation {
+          flex-flow: row wrap;
+          align-items: flex-start;
+          & div.book {
+            order: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px) {
+  section {
+    article {
+      &.product {
+        & div.presentation {
+          flex-wrap: nowrap;
+          & > h1 {
+            display: none;
+          }
+          & div.vignettes {
+            flex-flow: column nowrap;
+            width: auto;
+            & p {
+
+            }
+          }
+          & div.photo {
+            width: auto;
+          }
+          & form.purchase {
+            margin-right: 0.9rem;
+            margin-left: 2.9rem;
+          }
+          & div.book {
+            margin-left: 2.9rem;
+            & > h1 {
+              display: flex;
+              @include text-product-title;
+              margin-bottom: 3.2rem;
+            }
           }
         }
       }

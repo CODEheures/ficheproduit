@@ -4,4 +4,5 @@ Réalisé par: Sylvain gagnot
 Liste des technos utilisées:  
 - Versionning: Git  
 - Extraction Style Guide: Zeplin  
-- Préprocesseur CSS: Sass  
+- Préprocesseur CSS: Sass
+- CSS: flexbox et @media(min-width) pour privilègier les calculs sur appareils à grand ecrans

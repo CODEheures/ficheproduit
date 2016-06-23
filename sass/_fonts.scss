@@ -35,11 +35,15 @@ $font-family2: Myriad Pro, sans-serif;
 
 @mixin text-brand {
   font-family: $font-family;
-  font-size: 2.2rem;
+  font-size: 1.35rem;
   font-weight: 900;
   line-height: 1.45;
   color: $white;
   text-transform: uppercase;
+}
+
+@mixin text-brand2 {
+  font-size: 2.2rem;
 }
 
 @mixin text-product-title {
