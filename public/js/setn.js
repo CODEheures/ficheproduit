@@ -81,6 +81,7 @@ $(document).ready(function () {
             //En desktop on affiche les liens du menu et le lien map
             $mainMenu.children('li').show();
             $map.show();
+            $phoneLocation.hide();
 
             //on clone 1 seule fois les elements ul.secondary dans le menu desktop
             if (!$flagHtmlForDesktopOk) {
