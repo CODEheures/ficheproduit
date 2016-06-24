@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //gestion du menu
-    function menu($isHamburger) {
+    function menu($isMenuHamburger) {
         //liste des variables utiles
         var $mainMenu = $('ul.primary');
         var $map = $('.map');
@@ -19,7 +19,7 @@ $(document).ready(function () {
         $mainMenu.find('li').hide();
         $mainMenu.removeClass('active');
 
-        if ($isHamburger) {
+        if ($isMenuHamburger) {
             //si la version desktop du menu existe on la cache et on affiche la version hamburger
             if ($flagHtmlForDesktopOk) {
                 $desktopMenu.hide();
@@ -116,27 +116,94 @@ $(document).ready(function () {
     }
 
     //gestion des tabs
-    $('.tab-selector').each(function () {
-        var $tabLink = $(this);
-        $(this).click(function (e) {
-            e.preventDefault();
-            $('.tab-selector').removeClass('active');
-            $tabLink.addClass('active');
-            var $data = $tabLink.data('tab');
-            $('.tab').hide();
-            $('#' + $data).show();
-        })
-    });
+    function tabs($isTabHamburger) {
+        var $tabSelectors = $('.tab-selector');
+
+
+        //unbind des clicks dans le cas du on resize
+        $tabSelectors.off();
+
+
+        if($isTabHamburger) {
+            $('.tabs').find('.tab').hide();
+            $tabSelectors.removeClass('active');
+            $tabSelectors.find('img:not(.note)').each(function () {
+                $(this).attr('src', '/css/assets/plus.png');
+            });
+        } else {
+            var $data = $('.tab-selector.active').data('tab');
+            if ($data) {
+                $('#' + $data).show();
+            } else {
+                var $firstTab = $('.tab-selector:first-of-type');
+                $data = $firstTab.data('tab');
+                $firstTab.addClass('active');
+                $('#' + $data).show();
+            }
+        }
+
+
+        $tabSelectors.each(function () {
+            var $tabLink = $(this);
+            $(this).click(function (e) {
+                e.preventDefault();
+                var $data = $tabLink.data('tab');
+                //cas 1: menu tabs type hamburger le clic ouvre et ferme le tab
+                if($isTabHamburger) {
+                    if($tabLink.hasClass('active')) {
+                        //on desactive et on ferme le tab
+                        console.log('ici');
+                        $tabLink.removeClass('active');
+                        $tabLink.find('img:not(.note)').each(function () {
+                            $(this).attr('src', '/css/assets/plus.png');
+                        });
+                        $('#' + $data).slideUp();
+                    } else {
+                        //on desactive et on ferme tous les tabs
+                        $tabSelectors.removeClass('active');
+                        $tabSelectors.find('img:not(.note)').each(function () {
+                            $(this).attr('src', '/css/assets/plus.png');
+                        });
+                        $('.tab:not(#' + $data + ')').slideUp();
+                        //on active et on ouvre le tab
+                        $tabLink.addClass('active');
+                        $tabLink.find('img:not(.note)').attr('src', '/css/assets/moins.png');
+                        $('#' + $data).slideDown();
+                    }
+                //cas 2: tabs non hamburger le clic ne desactive et ne referme jamais le tab
+                } else {
+                    $tabSelectors.removeClass('active');
+                    $tabSelectors.find('img:not(.note)').each(function () {
+                        $(this).attr('src', '/css/assets/plus.png');
+                    });
+                    $('.tab:not(#' + $data + ')').hide();
+                    $tabLink.addClass('active');
+                    $tabLink.find('img:not(.note)').attr('src', '/css/assets/moins.png');
+                    $('#' + $data).show();
+                }
+            })
+        });
+    }
+
+    function isTabHamb() {
+        return ($('.tabs .selectors').css('flex-direction') === 'column');
+    }
+
 
 
     function main() {
-        var $isHamburger = isMenuHamb();
-        menu($isHamburger);
-
+        var $isMenuHamburger = isMenuHamb();
+        var $isTabHamburger = isTabHamb();
+        menu($isMenuHamburger);
+        tabs($isTabHamburger);
         $(window).resize(function () {
-            if ($isHamburger !== isMenuHamb()) {
-                $isHamburger = isMenuHamb();
-                menu($isHamburger);
+            if ($isMenuHamburger !== isMenuHamb()) {
+                $isMenuHamburger = isMenuHamb();
+                menu($isMenuHamburger);
+            }
+            if ($isTabHamburger !== isTabHamb()) {
+                $isTabHamburger = isTabHamb();
+                tabs($isTabHamburger);
             }
         });
     }

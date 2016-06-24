@@ -352,15 +352,20 @@
 
     <article class="container tabs">
         <div class="selectors">
-            <a href="#" title="description" class="tab-selector active" data-tab="tab1">description</a>
-            <a href="#" title="caractristiques" class="tab-selector" data-tab="tab2">caractéristiques</a>
+            <a href="#" title="description" class="tab-selector active" data-tab="tab1">description<img src="/css/assets/moins.png"></a>
+            <a href="#" title="caractristiques" class="tab-selector" data-tab="tab2">caractéristiques<img src="/css/assets/plus.png"></a>
             <a href="#" title="description" class="tab-selector" data-tab="tab3">
-                Avis (125)
-                <img src="/css/assets/star_enable.svg">
-                <img src="/css/assets/star_enable.svg">
-                <img src="/css/assets/star_enable.svg">
-                <img src="/css/assets/star_enable.svg">
-                <img src="/css/assets/star_disable2.svg">
+                <div class="left">
+                    Avis (125)
+                    <img class="note" src="/css/assets/star_enable.svg">
+                    <img class="note" src="/css/assets/star_enable.svg">
+                    <img class="note" src="/css/assets/star_enable.svg">
+                    <img class="note" src="/css/assets/star_enable.svg">
+                    <img class="note" src="/css/assets/star_disable2.svg">
+                </div>
+                <div class="right">
+                    <img src="/css/assets/plus.png">
+                </div>
             </a>
         </div>
         <div id="tab1" class="tab active">
@@ -419,13 +424,31 @@
                     <img src="/css/assets/triangle.svg"/>
                     <h2>Les photos de nos clients</h2>
                 </div>
-                <div class="photo">
-                    <img src="/img/client.jpg" alt="photo de client"/>
-                    <a href="#" title="photo précédente" class="back"><img src="/css/assets/arrow-right.png"
-                                                                           alt="image fleche gauche"></a>
-                    <a href="#" title="photo suivante" class="next"><img src="/css/assets/arrow-left.png"
-                                                                         alt="image fleche droite"></a>
-                    <p>Matthieu, 29ans - FRANCE</p>
+                <div class="slider">
+                    <div class="photos">
+                        <div class="photo">
+                            <img src="/img/client.jpg" alt="photo de client"/>
+                            <p>Matthieu, 29ans - FRANCE</p>
+                        </div>
+                        <div class="photo">
+                            <img src="/img/client.jpg" alt="photo de client"/>
+                            <p>Matthieu, 29ans - FRANCE</p>
+                        </div>
+                        <div class="photo">
+                            <img src="/img/client.jpg" alt="photo de client"/>
+                            <p>Matthieu, 29ans - FRANCE</p>
+                        </div>
+                        <div class="photo">
+                            <img src="/img/client.jpg" alt="photo de client"/>
+                            <p>Matthieu, 29ans - FRANCE</p>
+                        </div>
+                    </div>
+                    <a href="#" title="photo précédente" class="back">
+                        <img src="/css/assets/arrow-right.png" alt="image fleche gauche">
+                    </a>
+                    <a href="#" title="photo suivante" class="next">
+                        <img src="/css/assets/arrow-left.png" alt="image fleche droite">
+                    </a>
                 </div>
             </div>
         </div>

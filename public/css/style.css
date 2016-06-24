@@ -780,24 +780,36 @@ section {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
       -webkit-box-align: stretch;
           -ms-flex-align: stretch;
-              align-items: stretch; }
+              align-items: stretch;
+      width: 100%; }
       section article.tabs div.selectors a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding: 1.4rem 2.75rem;
-        margin-right: 0.15rem; }
+        margin-right: 0.15rem;
+        margin-bottom: 0.2rem; }
         section article.tabs div.selectors a:not(.active) {
           font-family: Lato, sans-serif;
           font-size: 1.4rem;
           font-weight: bold;
           color: #62605e;
           text-transform: uppercase;
-          margin-bottom: 0.2rem;
           background: #f6f9f9; }
         section article.tabs div.selectors a.active {
           font-family: Lato, sans-serif;
@@ -805,14 +817,13 @@ section {
           font-weight: bold;
           color: #558540;
           text-transform: uppercase;
-          margin-bottom: 0;
           background: white; }
     section article.tabs div.tab {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
@@ -822,7 +833,7 @@ section {
       padding-top: 3.1rem;
       padding-bottom: 3.4rem;
       padding-left: 1.45rem;
-      padding-right: 3.1rem;
+      padding-right: 1.45rem;
       background: white;
       width: 100%;
       display: none; }
@@ -896,8 +907,10 @@ section {
                 justify-content: flex-start;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center; }
-        section article.tabs div.tab div.right div.photo {
+                align-items: center;
+        width: 100%;
+        margin-top: 5.3rem; }
+        section article.tabs div.tab div.right div.slider {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -910,21 +923,42 @@ section {
               -ms-flex-align: center;
                   align-items: center;
           position: relative;
-          margin-left: 2.3rem; }
-          section article.tabs div.tab div.right div.photo a {
+          margin-left: 0; }
+          section article.tabs div.tab div.right div.slider div.photos {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex; }
+            section article.tabs div.tab div.right div.slider div.photos div.photo {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-flow: column nowrap;
+                  flex-flow: column nowrap;
+              -webkit-box-pack: start;
+                  -ms-flex-pack: start;
+                      justify-content: flex-start;
+              -webkit-box-align: center;
+                  -ms-flex-align: center;
+                      align-items: center;
+              margin-right: 1.7rem; }
+              section article.tabs div.tab div.right div.slider div.photos div.photo:not(:first-of-type) {
+                display: none; }
+              section article.tabs div.tab div.right div.slider div.photos div.photo img {
+                max-width: 100%; }
+          section article.tabs div.tab div.right div.slider a {
             position: absolute;
             top: calc(50% - 4.6rem);
             height: 4.6rem;
             width: 4.6rem;
             background: white;
             text-align: center; }
-            section article.tabs div.tab div.right div.photo a.back {
+            section article.tabs div.tab div.right div.slider a.back {
               left: -1.3rem; }
-            section article.tabs div.tab div.right div.photo a.next {
+            section article.tabs div.tab div.right div.slider a.next {
               right: -1.3rem; }
-            section article.tabs div.tab div.right div.photo a img {
+            section article.tabs div.tab div.right div.slider a img {
               margin-top: 0.9rem; }
-          section article.tabs div.tab div.right div.photo p {
+          section article.tabs div.tab div.right div.slider p {
             font-family: Lato, sans-serif;
             font-size: 1.6rem;
             font-weight: bold;
@@ -999,28 +1033,34 @@ section {
           padding-left: 1.1rem;
           padding-right: 1.1rem;
           border: solid 1px #eee8e3; }
+          section article.recommandations div.list ul li:not(:last-of-type) {
+            margin-right: 1rem; }
+          section article.recommandations div.list ul li:nth-of-type(1n +3) {
+            display: none; }
           section article.recommandations div.list ul li h3 {
             font-family: Lato, sans-serif;
             font-size: 1.8rem;
             font-weight: bold;
             line-height: 1.56;
-            color: #333231; }
+            color: #333231;
+            font-size: 1.3rem; }
           section article.recommandations div.list ul li img {
             -ms-flex-item-align: center;
                 align-self: center; }
+          section article.recommandations div.list ul li > img {
+            max-width: 75%; }
           section article.recommandations div.list ul li div.price {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            -ms-flex-flow: row nowrap;
-                flex-flow: row nowrap;
-            -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                    justify-content: space-between;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
             -webkit-box-align: center;
                 -ms-flex-align: center;
                     align-items: center;
-            padding-left: 1.2rem;
             width: 100%; }
             section article.recommandations div.list ul li div.price p {
               font-family: Lato, sans-serif;
@@ -1035,9 +1075,21 @@ section {
             font-weight: normal;
             color: #62605e;
             text-decoration: line-through;
-            padding-left: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            justify-content: center;
             text-decoration: none;
-            margin-top: 1rem; }
+            margin-top: 1rem;
+            width: 100%; }
             section article.recommandations div.list ul li div.original-price span {
               text-decoration: line-through; }
 
@@ -1080,6 +1132,8 @@ footer div.advantages {
       text-align: center;
       color: #ffffff;
       padding-top: 1.5rem; }
+      footer div.advantages div.container ul li:not(last-of-type) {
+        margin-right: 1rem; }
 
 footer div.payments {
   width: 100%;
@@ -1090,11 +1144,10 @@ footer div.payments {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
@@ -1127,36 +1180,38 @@ footer div.payments {
         font-size: 1.6rem;
         font-weight: normal;
         color: #333231; }
-    footer div.payments div.container div.left {
-      padding-left: 1.7rem; }
-      footer div.payments div.container div.left p {
-        margin-right: 3.7rem; }
-    footer div.payments div.container div.right {
-      padding-right: 9.29rem; }
-      footer div.payments div.container div.right p.btn {
-        font-family: Myriad Pro, sans-serif;
-        font-size: 1.6rem;
-        font-weight: normal;
-        color: #333231;
-        padding: 1.1rem 2.48rem;
-        background: #e5e5e5; }
-      footer div.payments div.container div.right p:last-of-type {
-        margin-left: 3.1rem; }
+    footer div.payments div.container div.left ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      footer div.payments div.container div.left ul img {
+        max-width: 100%; }
+    footer div.payments div.container div.right p.btn {
+      font-family: Myriad Pro, sans-serif;
+      font-size: 1.6rem;
+      font-weight: normal;
+      color: #333231;
+      padding: 1.1rem 2.48rem;
+      background: #e5e5e5; }
+    footer div.payments div.container div.right li:not(:first-of-type) p:last-of-type {
+      margin-left: 3.1rem; }
 
 footer div.communication {
   width: 100%;
   background: #558540;
   padding-top: 2.2rem;
-  padding-bottom: 1.4rem; }
+  padding-bottom: 1.4rem;
+  padding-left: 1rem;
+  padding-right: 1rem; }
   footer div.communication div.container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
@@ -1164,22 +1219,29 @@ footer div.communication {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
       font-family: Lato, sans-serif;
       font-size: 1.6rem;
       font-weight: normal;
       color: #fcffff; }
+      footer div.communication div.container form.newsletter input {
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        border: none; }
       footer div.communication div.container form.newsletter input[type="email"] {
-        padding: 1rem;
+        padding: 1.11rem;
         margin-left: 1.3rem;
         margin-right: 0;
+        margin-top: 1rem;
         max-width: 19rem; }
       footer div.communication div.container form.newsletter input[type="submit"] {
         font-family: Lato, sans-serif;
@@ -1188,6 +1250,7 @@ footer div.communication {
         color: #ffffff;
         text-transform: uppercase;
         margin-left: 0;
+        margin-top: 1rem;
         border: none;
         background: #333231;
         padding: 1rem 1.4rem;
@@ -1204,6 +1267,8 @@ footer div.communication {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
       font-family: Lato, sans-serif;
       font-size: 1.6rem;
       font-weight: normal;
@@ -1235,8 +1300,7 @@ footer div.communication {
               justify-content: space-between;
       -webkit-box-align: start;
           -ms-flex-align: start;
-              align-items: flex-start;
-      max-width: 15.4rem; }
+              align-items: flex-start; }
       footer div.communication div.container a.discover img {
         margin-left: 2rem;
         margin-top: 0.3rem; }
@@ -1250,15 +1314,20 @@ footer div.links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start; }
-    footer div.links div.container div.brand, footer div.links div.container div.plus, footer div.links div.container div.sav, footer div.links div.container div.quality, footer div.links div.container div.conseil {
+            align-items: flex-start;
+    padding-left: 1rem; }
+    footer div.links div.container > div:not(:last-of-type) {
+      padding-right: 1rem; }
+    footer div.links div.container > div {
+      margin-bottom: 3.5rem; }
+    footer div.links div.container div.brand, footer div.links div.container div.plus, footer div.links div.container div.sav, footer div.links div.container div.conseil, footer div.links div.container div.quality {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1269,7 +1338,7 @@ footer div.links {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start;
-      max-width: 20%; }
+      width: 20rem; }
     footer div.links div.container h4 {
       font-family: Lato, sans-serif;
       font-size: 1.6rem;
@@ -1320,10 +1389,42 @@ footer div.links {
       footer div.links div.container div.conseil a img {
         margin-right: 1rem; }
 
+@media screen and (min-width: 430px) {
+  footer div.communication div.container form.newsletter {
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap; }
+    footer div.communication div.container form.newsletter input[type="email"], footer div.communication div.container form.newsletter input[type="submit"] {
+      margin-top: 0; } }
+
 @media screen and (min-width: 540px) {
   header .heading-main .container div.account a span, header .heading-main .container div.cart a span {
     display: inline-block;
-    padding-left: 1rem; } }
+    padding-left: 1rem; }
+  section article.recommandations div.list ul li:nth-of-type(1n +3) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  section article.recommandations div.list ul li:nth-of-type(1n +4) {
+    display: none; } }
+
+@media screen and (min-width: 560px) {
+  section article.tabs div.selectors {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    width: auto; }
+    section article.tabs div.selectors a.active {
+      margin-bottom: 0; }
+    section article.tabs div.selectors a img:not(.note) {
+      display: none; } }
 
 @media screen and (min-width: 620px) {
   section article.product div.presentation {
@@ -1336,7 +1437,36 @@ footer div.links {
     section article.product div.presentation div.book {
       -webkit-box-ordinal-group: 1;
           -ms-flex-order: 0;
-              order: 0; } }
+              order: 0; }
+  footer div.payments div.container div.left ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    footer div.payments div.container div.left ul img {
+      max-width: none; }
+    footer div.payments div.container div.left ul p {
+      margin-right: 3.7rem; } }
+
+@media screen and (min-width: 640px) {
+  section article.tabs div.tab div.right div.slider div.photos div.photo:not(:first-of-type) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  section article.tabs div.tab div.right div.slider div.photos div.photo:not(:first-of-type):not(:nth-of-type(2)) {
+    display: none; }
+  section article.tabs div.tab div.right div.slider div.photos div.photo img {
+    max-width: none; }
+  section article.recommandations div.list ul li div.price {
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  section article.recommandations div.list ul li div.original-price {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; } }
 
 @media screen and (min-width: 730px) {
   div.container {
@@ -1596,7 +1726,47 @@ footer div.links {
               height: 0.9rem;
               content: "";
               margin-bottom: 0.1rem;
-              margin-right: 0.6rem; } }
+              margin-right: 0.6rem; }
+  footer div.communication {
+    padding-left: 0;
+    padding-right: 0; } }
+
+@media screen and (min-width: 960px) {
+  footer div.links div.container div.quality {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; } }
+
+@media screen and (min-width: 880px) {
+  section article.tabs div.tab {
+    padding-left: 3.1rem;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap; }
+    section article.tabs div.tab div.right {
+      width: auto;
+      margin-top: 0; }
+      section article.tabs div.tab div.right div.slider {
+        margin-left: 2.3rem; }
+        section article.tabs div.tab div.right div.slider div.photos div.photo:not(:first-of-type) {
+          display: none; }
+  section article.recommandations div.list ul li:nth-of-type(1n +4) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  section article.recommandations div.list ul li h3 {
+    font-family: Lato, sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.56;
+    color: #333231; }
+  section article.recommandations div.list ul li > img {
+    max-width: none; }
+  section article.recommandations div.list ul div.original-price {
+    padding-left: 1.2rem; }
+  footer div.payments div.container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
 
 @media screen and (min-width: 930px) {
   header div.heading-main div.container div.account a img, header div.heading-main div.container div.cart a img {
@@ -1631,3 +1801,21 @@ footer div.links {
         line-height: 1.65;
         color: #333231;
         margin-bottom: 3.2rem; } }
+
+@media screen and (min-width: 1000px) {
+  footer div.payments div.container div.right {
+    padding-right: 9.29rem; }
+  footer div.communication div.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    footer div.communication div.container a {
+      max-width: 15.4rem; } }
