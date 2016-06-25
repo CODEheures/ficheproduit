@@ -494,7 +494,7 @@ section {
       width: 100%;
       padding-left: 1.2rem;
       padding-right: 1.2rem; }
-      section article.product div.presentation > h1 {
+      section article.product div.presentation > h2 {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -562,7 +562,7 @@ section {
         margin-top: 2.2rem;
         margin-bottom: 2.1rem;
         margin-left: 0; }
-        section article.product div.presentation div.book h1 {
+        section article.product div.presentation div.book h2 {
           display: none; }
         section article.product div.presentation div.book table.avis {
           width: 100%;
@@ -1778,7 +1778,7 @@ footer div.links {
   section article.product div.presentation {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap; }
-    section article.product div.presentation > h1 {
+    section article.product div.presentation > h2 {
       display: none; }
     section article.product div.presentation div.vignettes {
       -ms-flex-flow: column nowrap;
@@ -1791,7 +1791,7 @@ footer div.links {
       margin-left: 2.9rem; }
     section article.product div.presentation div.book {
       margin-left: 2.9rem; }
-      section article.product div.presentation div.book > h1 {
+      section article.product div.presentation div.book > h2 {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
