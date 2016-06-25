@@ -28,7 +28,7 @@ $(document).ready(function () {
             //init du hamburger
             $mainMenu.find('li').removeClass('active');
             var $hamburgerImg = $hamburgerLink.children('img');
-            $hamburgerImg.attr("src", '/css/assets/burger-close.svg');
+            $hamburgerImg.attr("src", './css/assets/burger-close.svg');
             $map.hide();
             $phoneLocation.hide();
             $hamburgerLink.click(function () {
@@ -40,12 +40,12 @@ $(document).ready(function () {
                     });
                     $map.slideUp();
                     $phoneLocation.slideUp();
-                    $hamburgerImg.attr("src", '/css/assets/burger-close.svg');
+                    $hamburgerImg.attr("src", './css/assets/burger-close.svg');
                 } else {
                     $mainMenu.children('li').slideDown();
                     $map.slideDown();
                     $phoneLocation.slideDown();
-                    $hamburgerImg.attr("src", '/css/assets/burger-open.svg');
+                    $hamburgerImg.attr("src", './css/assets/burger-open.svg');
                 }
             });
             $menuLinks.each(function () {
@@ -128,7 +128,7 @@ $(document).ready(function () {
             $('.tabs').find('.tab').hide();
             $tabSelectors.removeClass('active');
             $tabSelectors.find('img:not(.note)').each(function () {
-                $(this).attr('src', '/css/assets/plus.png');
+                $(this).attr('src', './css/assets/plus.png');
             });
         } else {
             var $data = $('.tab-selector.active').data('tab');
@@ -155,30 +155,30 @@ $(document).ready(function () {
                         console.log('ici');
                         $tabLink.removeClass('active');
                         $tabLink.find('img:not(.note)').each(function () {
-                            $(this).attr('src', '/css/assets/plus.png');
+                            $(this).attr('src', './css/assets/plus.png');
                         });
                         $('#' + $data).slideUp();
                     } else {
                         //on desactive et on ferme tous les tabs
                         $tabSelectors.removeClass('active');
                         $tabSelectors.find('img:not(.note)').each(function () {
-                            $(this).attr('src', '/css/assets/plus.png');
+                            $(this).attr('src', './css/assets/plus.png');
                         });
                         $('.tab:not(#' + $data + ')').slideUp();
                         //on active et on ouvre le tab
                         $tabLink.addClass('active');
-                        $tabLink.find('img:not(.note)').attr('src', '/css/assets/moins.png');
+                        $tabLink.find('img:not(.note)').attr('src', './css/assets/moins.png');
                         $('#' + $data).slideDown();
                     }
                 //cas 2: tabs non hamburger le clic ne desactive et ne referme jamais le tab
                 } else {
                     $tabSelectors.removeClass('active');
                     $tabSelectors.find('img:not(.note)').each(function () {
-                        $(this).attr('src', '/css/assets/plus.png');
+                        $(this).attr('src', './css/assets/plus.png');
                     });
                     $('.tab:not(#' + $data + ')').hide();
                     $tabLink.addClass('active');
-                    $tabLink.find('img:not(.note)').attr('src', '/css/assets/moins.png');
+                    $tabLink.find('img:not(.note)').attr('src', './css/assets/moins.png');
                     $('#' + $data).show();
                 }
             })
