@@ -279,9 +279,9 @@ header {
           header nav .container ul li.active > a {
             color: #558540 !important; }
           header nav .container ul li.active > a:after {
-            content: url("/css/assets/moins.png"); }
+            content: url("./assets/moins.png"); }
           header nav .container ul li:not(.active) > a:after {
-            content: url("/css/assets/plus.png"); }
+            content: url("./assets/plus.png"); }
         header nav .container ul.primary > li {
           width: 90%;
           display: none; }
@@ -356,7 +356,7 @@ header {
           header nav .container ul.third > li a:after {
             content: ""; }
           header nav .container ul.third > li a:before {
-            background-image: url("/css/assets/triangle.svg");
+            background-image: url("./assets/triangle.svg");
             background-size: 0.9rem 0.9rem;
             display: inline-block;
             width: 0.9rem;
@@ -1719,7 +1719,7 @@ footer div.links {
             header div.desktopMenu .container ul.third li a:hover, header div.desktopMenu .container ul.third li a:active {
               color: #558540; }
             header div.desktopMenu .container ul.third li a:before {
-              background-image: url("/css/assets/triangle.svg");
+              background-image: url("./assets/triangle.svg");
               background-size: 0.9rem 0.9rem;
               display: inline-block;
               width: 0.9rem;

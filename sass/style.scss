@@ -156,12 +156,12 @@ header {
               color: $fern-green !important;
             }
             & > a:after {
-              content: url('/css/assets/moins.png');
+              content: url('./assets/moins.png');
             }
           }
           &:not(.active) {
             & > a:after {
-              content: url('/css/assets/plus.png');
+              content: url('./assets/plus.png');
             }
           }
         }
@@ -219,7 +219,7 @@ header {
             content: "";
           }
           & a:before {
-            background-image: url('/css/assets/triangle.svg');
+            background-image: url('./assets/triangle.svg');
             background-size: 0.9rem 0.9rem;
             display: inline-block;
             width: 0.9rem;
@@ -1196,7 +1196,7 @@ footer {
                   color: $fern-green;
                 }
                 &:before {
-                  background-image: url('/css/assets/triangle.svg');
+                  background-image: url('./assets/triangle.svg');
                   background-size: 0.9rem 0.9rem;
                   display: inline-block;
                   width: 0.9rem;
