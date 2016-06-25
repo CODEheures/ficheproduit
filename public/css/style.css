@@ -720,7 +720,8 @@ section {
             padding-bottom: 1.9rem;
             background: #558540;
             border: none;
-            border-radius: 0.2rem; }
+            border-radius: 0.2rem;
+            cursor: pointer; }
         section article.product div.presentation form.purchase div.stock {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -955,7 +956,7 @@ section {
             section article.tabs div.tab div.right div.slider a.back {
               left: -1.3rem; }
             section article.tabs div.tab div.right div.slider a.next {
-              right: -1.3rem; }
+              right: 0.4rem; }
             section article.tabs div.tab div.right div.slider a img {
               margin-top: 0.9rem; }
           section article.tabs div.tab div.right div.slider p {
