@@ -189,13 +189,85 @@ $(document).ready(function () {
         return ($('.tabs .selectors').css('flex-direction') === 'column');
     }
 
+    //gestion du slider
+    function slider() {
+        var $slider = $('.slider');
+        var $divPhotos = $slider.children('.photos').children('.photo');
+        var $back = $slider.children('a.back');
+        var $next = $slider.children('a.next');
+        var $activeBack;
+        var $activeNext;
+        var $nbPhotos;
+        var $firstVisible;
+        var $widthPhoto = '28.8rem';
 
+        //unbind des cick dans le cas d'un redimentionement
+        $back.off();
+        $next.off();
+
+        //reinit des display css en cas de resize
+        $divPhotos.css({'display': '', 'width': ''});
+
+        //desactivation des btn selon le cas
+        function activation() {
+            $activeBack = ($divPhotos.first().css('display') === 'none');
+            $activeNext = ($divPhotos.last().css('display') === 'none');
+            $activeBack ? $back.css({'opacity': '1', 'cursor' : 'pointer'}) : $back.css({'opacity': '0.5', 'cursor': 'default'});
+            $activeNext ? $next.css({'opacity': '1', 'cursor' : 'pointer'}) : $next.css({'opacity': '0.5', 'cursor': 'default'});
+        }
+
+        //on compte le nombre de photos affichée et on trouve la premiere affichée
+        function comptage() {
+            var $flagSearchFirstVisible = true;
+            $firstVisible = 0;
+            $nbPhotos = 0;
+            $divPhotos.each(function () {
+                $flagSearchFirstVisible ? $firstVisible++ : null;
+                if($(this).css('display') != 'none') {
+                    $nbPhotos++;
+                    $flagSearchFirstVisible = false;
+                }
+            });
+        }
+
+        activation();
+
+        $back.click(function (e) {
+            e.preventDefault();
+            if($activeBack) {
+                comptage();
+                console.log($firstVisible);
+                $divPhotos.eq($firstVisible+$nbPhotos-2).animate({'width': '0'}, {'complete' : function () {
+                    $(this).hide();
+                }});
+                $divPhotos.eq($firstVisible-2).css({'width': '0', 'display':'flex'});
+                $divPhotos.eq($firstVisible-2).animate({'width': $widthPhoto}, {'complete' : function () {
+                    activation();
+                }})
+            }
+        });
+
+        $next.click(function (e) {
+            e.preventDefault();
+            if($activeNext){
+                comptage();
+                $divPhotos.eq($firstVisible-1).animate({'width': '0'}, {'complete' : function () {
+                    $(this).hide();
+                }});
+                $divPhotos.eq($firstVisible+$nbPhotos-1).css({'width': '0', 'display':'flex'});
+                $divPhotos.eq($firstVisible+$nbPhotos-1).animate({'width': $widthPhoto}, {'complete' : function () {
+                    activation();
+                }})
+            }
+        });
+    }
 
     function main() {
         var $isMenuHamburger = isMenuHamb();
         var $isTabHamburger = isTabHamb();
         menu($isMenuHamburger);
         tabs($isTabHamburger);
+        slider();
         $(window).resize(function () {
             if ($isMenuHamburger !== isMenuHamb()) {
                 $isMenuHamburger = isMenuHamb();
@@ -205,6 +277,7 @@ $(document).ready(function () {
                 $isTabHamburger = isTabHamb();
                 tabs($isTabHamburger);
             }
+            slider();
         });
     }
 
