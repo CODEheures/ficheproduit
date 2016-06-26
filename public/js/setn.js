@@ -240,7 +240,8 @@ $(document).ready(function () {
                 $divPhotos.eq($firstVisible+$nbPhotos-2).animate({'width': '0'}, {'complete' : function () {
                     $(this).hide();
                 }});
-                $divPhotos.eq($firstVisible-2).css({'width': '0', 'display':'flex'});
+                $divPhotos.eq($firstVisible-2).css({'width': '0'});
+                $divPhotos.eq($firstVisible-2).attr({'style': 'display: flex; display: -webkit-box; display:-ms-flexbox'});
                 $divPhotos.eq($firstVisible-2).animate({'width': $widthPhoto}, {'complete' : function () {
                     activation();
                 }})
@@ -254,7 +255,8 @@ $(document).ready(function () {
                 $divPhotos.eq($firstVisible-1).animate({'width': '0'}, {'complete' : function () {
                     $(this).hide();
                 }});
-                $divPhotos.eq($firstVisible+$nbPhotos-1).css({'width': '0', 'display':'flex'});
+                $divPhotos.eq($firstVisible+$nbPhotos-1).css({'width': '0'});
+                $divPhotos.eq($firstVisible-2).attr({'style': 'display: flex; display: -webkit-box; display:-ms-flexbox'});
                 $divPhotos.eq($firstVisible+$nbPhotos-1).animate({'width': $widthPhoto}, {'complete' : function () {
                     activation();
                 }})
@@ -280,6 +282,7 @@ $(document).ready(function () {
             slider();
         });
     }
+    
 
     var $flagHtmlForDesktopOk = false;
     main();

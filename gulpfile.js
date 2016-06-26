@@ -32,7 +32,7 @@ gulp.task('sass', function () {
         .pipe($.sass().on('error', console.error.bind(console, "SASS Error:")
         ))
         .pipe($.autoprefixer({
-            cascade:true
+            cascade:false
         }))
         .pipe(gulp.dest($path.css));
     //.pipe($.size())

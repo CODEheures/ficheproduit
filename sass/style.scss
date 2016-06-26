@@ -64,6 +64,7 @@ header {
         @include box2;
         & img {
           z-index: 2;
+          -webkit-transform: translate3d(0,0,0);
           height: 5rem;
         }
         & a {
@@ -79,6 +80,10 @@ header {
 
       & form.search {
         display: none;
+        & input {
+          appearance: none;
+
+        }
       }
 
       & div.separator {
@@ -107,6 +112,7 @@ header {
   & div.search {
     & div.container {
       @include box3;
+      -webkit-box-pack: center;
       margin-top: 1.3rem;
       margin-bottom: 1.3rem;
       & form.search {
@@ -121,6 +127,8 @@ header {
         }
         & input {
           @include text-placeholder;
+          appearance: none;
+          display: flex;
           width: 100%;
           height: 3.9rem;
           padding-right: 4rem;
@@ -157,11 +165,13 @@ header {
             }
             & > a:after {
               content: url('./assets/moins.png');
+              display: flex;
             }
           }
           &:not(.active) {
             & > a:after {
               content: url('./assets/plus.png');
+              display: flex;
             }
           }
         }
@@ -238,6 +248,7 @@ header {
         & img {
           padding-left: 1.3rem;
           padding-right: 1.3rem;
+          display: flex;
         }
         & a {
           @include text-menu-primary-reverse;
@@ -435,6 +446,7 @@ section {
                 position: absolute;
                 right: 1rem;
                 top: calc(50% - 0.2rem);
+                top: -webkit-calc(50% - 0.2rem);
                 //margin-left: -2rem;
                 pointer-events: none;
               }
@@ -572,6 +584,7 @@ section {
             & a {
               position: absolute;
               top: calc(50% - 4.6rem);
+              top: -webkit-calc(50% - 4.6rem);
               height: 4.6rem;
               width: 4.6rem;
               background: white;
@@ -869,7 +882,8 @@ footer {
     & div.communication {
       & div.container {
         & form.newsletter {
-          flex-flow:row nowrap;
+          flex-direction: row;
+          flex-wrap: nowrap;
           & input {
             &[type="email"], &[type="submit"] {
               margin-top: 0;
@@ -942,7 +956,8 @@ footer {
     article {
       &.product {
         & div.presentation {
-          flex-flow: row wrap;
+          flex-direction: row;
+          flex-wrap: wrap;
           align-items: flex-start;
           & div.book {
             order: 0;
@@ -999,7 +1014,8 @@ footer {
           & ul {
             & li {
               & div.price {
-                flex-flow: row nowrap;
+                flex-direction: row;
+                flex-wrap: nowrap;
                 justify-content: space-between;
               }
               & div.original-price {
@@ -1076,6 +1092,7 @@ footer {
           }
           & input {
             @include text-placeholder;
+            display: flex;
             width: 100%;
             height: 3.9rem;
             padding-right: 4rem;
@@ -1113,6 +1130,7 @@ footer {
             @include box2;
             & > li {
               border-bottom: 0.5rem solid transparent;
+              width: auto;
               & > a {
                 line-height: 3;
                 padding: 0;
@@ -1223,25 +1241,14 @@ footer {
   }
 }
 
-@media screen and (min-width: 960px) {
-  footer {
-    & div.links {
-      & div.container {
-        & div.quality {
-          order: 0;
-        }
-      }
-    }
-  }
-}
-
 @media screen and (min-width: 880px) {
   section {
     article {
       &.tabs {
         & div.tab {
           padding-left: 3.1rem;
-          flex-flow: row nowrap;
+          flex-direction: row;
+          flex-wrap: nowrap;
           & div.right {
             width: auto;
             margin-top: 0;
@@ -1307,6 +1314,18 @@ footer {
   }
 }
 
+@media screen and (min-width: 960px) {
+  footer {
+    & div.links {
+      & div.container {
+        & div.quality {
+          order: 0;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 980px) {
   section {
     article {
@@ -1317,7 +1336,8 @@ footer {
             display: none;
           }
           & div.vignettes {
-            flex-flow: column nowrap;
+            flex-direction: column;
+            flex-wrap: nowrap;
             width: auto;
             & p {
 
