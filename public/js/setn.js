@@ -236,7 +236,6 @@ $(document).ready(function () {
             e.preventDefault();
             if($activeBack) {
                 comptage();
-                console.log($firstVisible);
                 $divPhotos.eq($firstVisible+$nbPhotos-2).animate({'width': '0'}, {'complete' : function () {
                     $(this).hide();
                 }});
@@ -252,11 +251,12 @@ $(document).ready(function () {
             e.preventDefault();
             if($activeNext){
                 comptage();
+                console.log($nbPhotos);
                 $divPhotos.eq($firstVisible-1).animate({'width': '0'}, {'complete' : function () {
                     $(this).hide();
                 }});
                 $divPhotos.eq($firstVisible+$nbPhotos-1).css({'width': '0'});
-                $divPhotos.eq($firstVisible-2).attr({'style': 'display: flex; display: -webkit-box; display:-ms-flexbox'});
+                $divPhotos.eq($firstVisible+$nbPhotos-1).attr({'style': 'display: flex; display: -webkit-box; display:-ms-flexbox'});
                 $divPhotos.eq($firstVisible+$nbPhotos-1).animate({'width': $widthPhoto}, {'complete' : function () {
                     activation();
                 }})
