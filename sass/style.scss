@@ -64,7 +64,6 @@ header {
         @include box2;
         & img {
           z-index: 2;
-          -webkit-transform: translate3d(0,0,0);
           height: 5rem;
         }
         & a {
@@ -112,7 +111,6 @@ header {
   & div.search {
     & div.container {
       @include box3;
-      -webkit-box-pack: center;
       margin-top: 1.3rem;
       margin-bottom: 1.3rem;
       & form.search {
@@ -288,7 +286,6 @@ section {
   @include box5;
 
   & article {
-
     &.product {
       background: white;
       @include box5;
@@ -446,7 +443,6 @@ section {
                 position: absolute;
                 right: 1rem;
                 top: calc(50% - 0.2rem);
-                top: -webkit-calc(50% - 0.2rem);
                 //margin-left: -2rem;
                 pointer-events: none;
               }
@@ -578,13 +574,13 @@ section {
                 & img {
                   max-width: 100%;
                   width: 28.8rem;
+                  height: 100%;
                 }
               }
             }
             & a {
               position: absolute;
               top: calc(50% - 4.6rem);
-              top: -webkit-calc(50% - 4.6rem);
               height: 4.6rem;
               width: 4.6rem;
               background: white;
@@ -1124,7 +1120,7 @@ footer {
       border: solid 0.1rem $light-grey;
       height: 5.3rem;
       & .container {
-        @include box1;
+        @include box0;
         & ul {
           &.primary {
             @include box2;
@@ -1150,7 +1146,7 @@ footer {
         }
         & .map {
           @include box2;
-          height: 100%;
+          height: auto;
           width: auto;
         }
       }
@@ -1250,7 +1246,6 @@ footer {
           flex-direction: row;
           flex-wrap: nowrap;
           & div.right {
-            width: auto;
             margin-top: 0;
             & div.slider {
               margin-left: 2.3rem;
