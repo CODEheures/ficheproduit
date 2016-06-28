@@ -921,8 +921,7 @@ section {
                 display: none; }
               section article.tabs div.tab div.right div.slider div.photos div.photo img {
                 max-width: 100%;
-                width: 28.8rem;
-                height: 100%; }
+                width: 28.8rem; }
           section article.tabs div.tab div.right div.slider a {
             position: absolute;
             top: calc(50% - 4.6rem);
