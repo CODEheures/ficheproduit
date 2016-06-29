@@ -81,7 +81,6 @@ header {
         display: none;
         & input {
           appearance: none;
-
         }
       }
 
@@ -455,6 +454,7 @@ section {
             border-bottom: solid 1px $light-grey;
             & input {
               @include text-product-btn-add;
+              appearance: none;
               padding-left: 2.6rem;
               padding-right: 2.6rem;
               padding-top: 1.7rem;

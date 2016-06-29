@@ -702,6 +702,9 @@ section {
             line-height: 1.69;
             text-transform: uppercase;
             color: #fefefe;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
             padding-left: 2.6rem;
             padding-right: 2.6rem;
             padding-top: 1.7rem;
